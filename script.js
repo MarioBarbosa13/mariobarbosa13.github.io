@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const translations = {
         en: {
-            subtitle: "Geospatial Analyst | Remote Sensing | Environmental Analysis",
+            subtitle: "Geospatial Analyst specialized in Remote Sensing, Environmental Monitoring and Spatial Intelligence",
             aboutTitle: "About Me",
             aboutText: "Geospatial Analyst with experience in remote sensing, environmental monitoring and spatial analysis. Experience with land use classification, NDVI, hydrological analysis and GIS modeling. Research focused on climate variability and agricultural production in Northeastern Brazil.",
             educationTitle: "Education",
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             contactTitle: "Contact"
         },
         pt: {
-            subtitle: "Analista de Geoprocessamento | Sensoriamento Remoto | Análise Ambiental",
+            subtitle: "Analista de Geoprocessamento especializado em Sensoriamento Remoto, Monitoramento Ambiental e Inteligência Espacial",
             aboutTitle: "Sobre Mim",
             aboutText: "Analista em Geoprocessamento com experiência em sensoriamento remoto, monitoramento ambiental e análise espacial. Atuação em classificação de uso e cobertura do solo, NDVI, análise hidrográfica e modelagem GIS. Pesquisador com foco em variabilidade climática e produção agrícola no Nordeste do Brasil.",
             educationTitle: "Formação",
@@ -53,20 +53,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Começa em inglês
     setLanguage("en");
-}
-                          // ANIMAÇÃO AO ROLAR
-const sections = document.querySelectorAll("section");
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
+    // -----------------------------
+    // ANIMAÇÃO AO ROLAR
+    // -----------------------------
+
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
-}, { threshold: 0.2 });
 
-sections.forEach(section => {
-    observer.observe(section);
-});
 });
 
