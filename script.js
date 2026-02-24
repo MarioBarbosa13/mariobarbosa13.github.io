@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const cvEn = document.getElementById("cv-en");
     const cvPt = document.getElementById("cv-pt");
 
-    // Padrão inicial (Inglês)
+    // Começa em inglês
     cvEn.style.display = "inline-block";
     cvPt.style.display = "none";
 
