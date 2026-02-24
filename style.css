@@ -123,4 +123,15 @@ footer {
         margin: 60px 15px;
         padding: 30px;
     }
+    /* ANIMAÇÃO SUAVE */
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 }
