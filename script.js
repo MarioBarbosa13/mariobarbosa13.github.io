@@ -85,6 +85,17 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("skills-title").innerText = translations[lang].skillsTitle;
         document.getElementById("contact-title").innerText = translations[lang].contactTitle;
 
+        document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
+
+document.getElementById("project1-title").innerText = translations[lang].project1Title;
+document.getElementById("project1-text").innerText = translations[lang].project1Text;
+
+document.getElementById("project2-title").innerText = translations[lang].project2Title;
+document.getElementById("project2-text").innerText = translations[lang].project2Text;
+
+document.getElementById("project3-title").innerText = translations[lang].project3Title;
+document.getElementById("project3-text").innerText = translations[lang].project3Text;
+
         if(lang === "pt") {
             cvEn.style.display = "none";
             cvPt.style.display = "inline-block";
