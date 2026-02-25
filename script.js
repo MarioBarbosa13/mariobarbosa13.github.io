@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             educationTitle: "Education",
             educationText: "Bachelor in Geography – Federal University of Pernambuco (UFPE)<br>Master's Student in Geography – UFPE (2026)",
             experienceTitle: "Experience",
-            experienceText: "Administrative Director – MapGeo Jr. (2023–2024)<br>Scientific Research Scholarship (FACEPE) – Environmental diagnosis of the Botafogo River Basin (PE)",
+            experienceText: "Administrative Director – MapGeo Jr. (2023–2024)<br>Led project coordination and spatial analysis initiatives, supporting environmental and cartographic solutions.<br><br>Scientific Research Scholarship (FACEPE) – Botafogo River Basin Environmental Diagnosis (PE)<br>Conducted land use classification, NDVI analysis and spatial environmental assessment using GIS and remote sensing techniques.",
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
         },
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             educationTitle: "Formação",
             educationText: "Bacharel em Geografia – Universidade Federal de Pernambuco (UFPE)<br>Mestrando em Geografia – UFPE (2026)",
             experienceTitle: "Experiência",
-            experienceText: "Diretor Administrativo – MapGeo Jr. (2023–2024)<br>Iniciação Científica FACEPE – Diagnóstico ambiental da Bacia do Rio Botafogo (PE)",
+            experienceText: "Diretor Administrativo – MapGeo Jr. (2023–2024)<br>Coordenação de projetos e apoio a análises espaciais aplicadas a soluções ambientais e cartográficas.<br><br>Iniciação Científica FACEPE – Diagnóstico Ambiental da Bacia do Rio Botafogo (PE)<br>Realização de classificação de uso e cobertura do solo, análise de NDVI e avaliação ambiental espacial utilizando SIG e sensoriamento remoto.",
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
         }
