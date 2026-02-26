@@ -117,10 +117,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Fechar com ESC
-    document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-            modal.style.display = "none";
-        }
-    });
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        modal.style.display = "none";
+    }
+});
+
+// ===== LANGUAGE TOGGLE SWITCH =====
+
+const toggle = document.getElementById("languageToggle");
+
+toggle.checked = false;
+
+toggle.addEventListener("change", function () {
+    if (this.checked) {
+        setLanguage("pt");
+    } else {
+        setLanguage("en");
+    }
+});
 
 });
