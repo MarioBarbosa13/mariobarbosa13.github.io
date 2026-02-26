@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const cvEn = document.getElementById("cv-en");
     const cvPt = document.getElementById("cv-pt");
 
+    // Começa mostrando apenas inglês
+    cvPt.style.display = "none";
+
     const translations = {
+
         en: {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
 
@@ -86,7 +90,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.setLanguage = setLanguage;
 
-    // Começa em inglês
+    // Inicia em inglês
     setLanguage("en");
+
+    // ===== MODAL DE IMAGEM =====
+
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".project-card img").forEach(img => {
+        img.addEventListener("click", function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Fechar com ESC
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            modal.style.display = "none";
+        }
+    });
 
 });
