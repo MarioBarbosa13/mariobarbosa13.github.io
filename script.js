@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cvEn = document.getElementById("cv-en");
     const cvPt = document.getElementById("cv-pt");
-
-    // Começa mostrando apenas inglês
-    cvPt.style.display = "none";
+    const toggle = document.getElementById("languageToggle");
 
     const translations = {
 
@@ -82,16 +80,45 @@ document.addEventListener("DOMContentLoaded", function () {
         if (lang === "pt") {
             cvEn.style.display = "none";
             cvPt.style.display = "inline-block";
+            toggle.checked = true;
         } else {
             cvEn.style.display = "inline-block";
             cvPt.style.display = "none";
+            toggle.checked = false;
         }
+
+        // Salva escolha
+        localStorage.setItem("siteLanguage", lang);
     }
 
     window.setLanguage = setLanguage;
 
-    // Inicia em inglês
-    setLanguage("en");
+    // ===== DETECTA IDIOMA =====
+
+    const savedLanguage = localStorage.getItem("siteLanguage");
+
+    if (savedLanguage) {
+        setLanguage(savedLanguage);
+    } else {
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith("pt")) {
+            setLanguage("pt");
+        } else {
+            setLanguage("en");
+        }
+    }
+
+    // ===== TOGGLE =====
+
+    if (toggle) {
+        toggle.addEventListener("change", function () {
+            if (this.checked) {
+                setLanguage("pt");
+            } else {
+                setLanguage("en");
+            }
+        });
+    }
 
     // ===== MODAL DE IMAGEM =====
 
@@ -106,35 +133,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+    }
 
-    modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
+    if (modal) {
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
             modal.style.display = "none";
         }
     });
-
-    // Fechar com ESC
-document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-        modal.style.display = "none";
-    }
-});
-
-// ===== LANGUAGE TOGGLE SWITCH =====
-
-const toggle = document.getElementById("languageToggle");
-
-toggle.checked = false;
-
-toggle.addEventListener("change", function () {
-    if (this.checked) {
-        setLanguage("pt");
-    } else {
-        setLanguage("en");
-    }
-});
 
 });
