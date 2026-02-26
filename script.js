@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
 
             aboutTitle: "About Me",
-            aboutText: "Geospatial Analyst with experience in remote sensing, environmental monitoring and spatial analysis.",
+            aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
 
             educationTitle: "Education",
             educationText: "Bachelor in Geography – Federal University of Pernambuco (UFPE)<br>Master's Student in Geography – UFPE (2026)",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: "Analista de Geoprocessamento especializado em Sensoriamento Remoto",
 
             aboutTitle: "Sobre Mim",
-            aboutText: "Analista em Geoprocessamento com experiência em sensoriamento remoto e análise espacial.",
+            aboutText: "Analista de Geoprocessamento especializado em SIG, Sensoriamento Remoto e Análise de Dados Ambientais. Experiência em modelagem espacial, classificação de uso e cobertura do solo e interpretação de imagens de satélite. Atuação voltada à variabilidade climática, monitoramento ambiental e planejamento territorial.",
 
             educationTitle: "Formação",
             educationText: "Bacharel em Geografia – Universidade Federal de Pernambuco (UFPE)<br>Mestrando em Geografia – UFPE (2026)",
