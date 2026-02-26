@@ -98,7 +98,6 @@ input:checked + .slider:before {
     background-color: #0f172a;
 }
 
-/* Hover Glow */
 .switch:hover .slider {
     box-shadow: 0 0 10px rgba(34,197,94,0.6);
 }
@@ -128,7 +127,10 @@ input:checked + .slider:before {
 section {
     max-width: 900px;
     margin: 120px auto;
-    padding: 0 20px;
+    padding: 50px;
+    background: #111827;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 section h2 {
@@ -140,14 +142,6 @@ section h2 {
 section p {
     font-size: 18px;
     opacity: 0.85;
-}
-
-/* CARD EFFECT */
-section {
-    background: #111827;
-    padding: 50px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 /* FOOTER */
@@ -171,17 +165,6 @@ footer {
     }
 }
 
-/* ANIMAÇÃO SUAVE */
-section {
-    opacity: 1;
-    transform: none;
-    transition: all 0.8s ease;
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 /* ===== PROJECTS ===== */
 
 .projects-grid {
@@ -204,6 +187,7 @@ section.show {
     height: 220px;
     object-fit: cover;
     transition: 0.4s ease;
+    cursor: pointer;
 }
 
 .project-card h3 {
@@ -226,6 +210,7 @@ section.show {
 .project-card:hover img {
     transform: scale(1.05);
 }
+
 /* ===== IMAGE MODAL ===== */
 
 .modal {
@@ -258,6 +243,42 @@ section.show {
     cursor: pointer;
 }
 
-.project-card img {
-    cursor: pointer;
+/* ===== CONTACT PREMIUM ===== */
+
+.contact-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #0f172a;
+    padding: 15px 20px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(34,197,94,0.2);
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    border: 1px solid #22c55e;
+    box-shadow: 0 10px 25px rgba(34,197,94,0.15);
+}
+
+.contact-item a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: #22c55e;
+}
+
+.contact-icon {
+    font-size: 20px;
 }
