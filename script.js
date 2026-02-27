@@ -15,6 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
             educationTitle: "Education",
             educationText: "Bachelor in Geography – Federal University of Pernambuco (UFPE)<br>Master's Student in Geography – UFPE (2026)",
 
+            articlesTitle: "Articles",
+            articles: [
+                {
+                    title: "Analysis of Vegetation Dynamics and Urban Expansion in Tamandaré–PE Using Remote Sensing",
+                    summary: "This study examines vegetation dynamics and urban expansion in Tamandaré–PE using remote sensing. Satellite imagery analysis highlights land cover changes and urban growth patterns, providing insights for sustainable planning and environmental monitoring.",
+                    publication: "Cadernos de Geociências – UFBA, 2025",
+                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
+                }
+            ],
+
             projectsTitle: "Projects",
             project1Title: "Land Cover Classification – Wyoming",
             project1Text: "Land cover mapping using satellite imagery and GIS techniques.",
@@ -39,6 +49,16 @@ document.addEventListener("DOMContentLoaded", function () {
             educationTitle: "Formação",
             educationText: "Bacharel em Geografia – Universidade Federal de Pernambuco (UFPE)<br>Mestrando em Geografia – UFPE (2026)",
 
+            articlesTitle: "Artigos",
+            articles: [
+                {
+                    title: "A Análise da Dinâmica da Vegetação e da Expansão Urbana em Tamandaré–PE por Meio do Sensoriamento Remoto",
+                    summary: "Este estudo analisa a dinâmica da vegetação e a expansão urbana em Tamandaré–PE por meio de sensoriamento remoto. A análise de imagens de satélite evidencia mudanças na cobertura do solo e padrões de crescimento urbano, fornecendo informações para planejamento sustentável e monitoramento ambiental.",
+                    publication: "Cadernos de Geociências – UFBA, 2025",
+                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
+                }
+            ],
+
             projectsTitle: "Projetos",
             project1Title: "Classificação de Uso e Cobertura da Terra – Wyoming",
             project1Text: "Mapeamento de uso da terra com imagens de satélite e SIG.",
@@ -53,7 +73,32 @@ document.addEventListener("DOMContentLoaded", function () {
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
         }
+
     };
+
+    // Função para renderizar artigos
+    function renderArticles(lang) {
+        const container = document.getElementById("articlesContainer");
+        container.innerHTML = ""; // limpa antes de renderizar
+
+        const articles = translations[lang].articles;
+
+        articles.forEach(article => {
+            const card = document.createElement("div");
+            card.className = "bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-xl transition";
+
+            card.innerHTML = `
+                <h3 class="text-xl font-semibold mb-2">${article.title}</h3>
+                <p class="text-gray-700 mb-2">${article.summary}</p>
+                <p class="text-sm text-gray-500 mb-4">${article.publication}</p>
+                <a href="${article.link}" class="text-blue-600 hover:underline font-medium" target="_blank">Read Full Article</a>
+            `;
+
+            container.appendChild(card);
+        });
+
+        document.getElementById("articles-title").innerText = translations[lang].articlesTitle;
+    }
 
     function setLanguage(lang) {
 
@@ -77,6 +122,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("skills-title").innerText = translations[lang].skillsTitle;
         document.getElementById("contact-title").innerText = translations[lang].contactTitle;
 
+        // Renderiza artigos
+        renderArticles(lang);
+
         if (lang === "pt") {
             cvEn.style.display = "none";
             cvPt.style.display = "inline-block";
@@ -94,9 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.setLanguage = setLanguage;
 
     // ===== DETECTA IDIOMA =====
-
     const savedLanguage = localStorage.getItem("siteLanguage");
-
     if (savedLanguage) {
         setLanguage(savedLanguage);
     } else {
@@ -109,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ===== TOGGLE =====
-
     if (toggle) {
         toggle.addEventListener("change", function () {
             if (this.checked) {
@@ -121,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ===== MODAL DE IMAGEM =====
-
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
     const closeBtn = document.querySelector(".close");
