@@ -164,7 +164,17 @@ footer {
         padding: 30px;
     }
 }
+#articlesContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
 
+@media (min-width: 768px) {
+    #articlesContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 /* ===== PROJECTS ===== */
 
 .projects-grid {
