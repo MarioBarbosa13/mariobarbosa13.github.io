@@ -80,38 +80,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function setLanguage(lang) {
-        const t = translations[lang];
-        document.getElementById("subtitle").innerText = t.subtitle;
-        document.getElementById("about-title").innerText = t.aboutTitle;
-        document.getElementById("about-text").innerText = t.aboutText;
-        document.getElementById("education-title").innerText = t.educationTitle;
-        document.getElementById("education-text").innerHTML = t.educationText;
-        document.getElementById("projects-title").innerText = t.projectsTitle;
-        document.getElementById("project1-title").innerText = t.project1Title;
-        document.getElementById("project1-text").innerText = t.project1Text;
-        document.getElementById("project2-title").innerText = t.project2Title;
-        document.getElementById("project2-text").innerText = t.project2Text;
-        document.getElementById("project3-title").innerText = t.project3Title;
-        document.getElementById("project3-text").innerText = t.project3Text;
-        document.getElementById("experience-title").innerText = t.experienceTitle;
-        document.getElementById("experience-text").innerHTML = t.experienceText;
-        document.getElementById("skills-title").innerText = t.skillsTitle;
-        document.getElementById("contact-title").innerText = t.contactTitle;
+    const t = translations[lang];
 
-        renderArticles(lang);
-
-        if (lang === "pt") {
-            cvEn.style.display = "none";
-            cvPt.style.display = "inline-block";
-            toggle.checked = true;
-        } else {
-            cvEn.style.display = "inline-block";
-            cvPt.style.display = "none";
-            toggle.checked = false;
+    function safeSetText(id, value, isHTML = false) {
+        const el = document.getElementById(id);
+        if (el) {
+            if (isHTML) el.innerHTML = value;
+            else el.innerText = value;
         }
-
-        localStorage.setItem("siteLanguage", lang);
     }
+
+    safeSetText("subtitle", t.subtitle);
+    safeSetText("about-title", t.aboutTitle);
+    safeSetText("about-text", t.aboutText);
+    safeSetText("education-title", t.educationTitle);
+    safeSetText("education-text", t.educationText, true);
+    safeSetText("projects-title", t.projectsTitle);
+    safeSetText("project1-title", t.project1Title);
+    safeSetText("project1-text", t.project1Text);
+    safeSetText("project2-title", t.project2Title);
+    safeSetText("project2-text", t.project2Text);
+    safeSetText("project3-title", t.project3Title);
+    safeSetText("project3-text", t.project3Text);
+    safeSetText("experience-title", t.experienceTitle);
+    safeSetText("experience-text", t.experienceText, true);
+    safeSetText("skills-title", t.skillsTitle);
+    safeSetText("contact-title", t.contactTitle);
+
+    renderArticles(lang);
+
+    if (lang === "pt") {
+        cvEn.style.display = "none";
+        cvPt.style.display = "inline-block";
+        toggle.checked = true;
+    } else {
+        cvEn.style.display = "inline-block";
+        cvPt.style.display = "none";
+        toggle.checked = false;
+    }
+
+    localStorage.setItem("siteLanguage", lang);
+}
 
     window.setLanguage = setLanguage;
 
