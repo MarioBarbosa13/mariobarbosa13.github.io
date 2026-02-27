@@ -154,7 +154,6 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-
     h1 {
         font-size: 36px;
     }
@@ -164,17 +163,12 @@ footer {
         padding: 30px;
     }
 }
+
 /* ===== ARTICLES GRID ===== */
 #articlesContainer {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    #articlesContainer {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 /* ===== ARTICLES CARD ===== */
@@ -200,8 +194,8 @@ footer {
 #articlesContainer a:hover {
     text-decoration: underline;
 }
-/* ===== PROJECTS ===== */
 
+/* ===== PROJECTS ===== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -247,7 +241,6 @@ footer {
 }
 
 /* ===== IMAGE MODAL ===== */
-
 .modal {
     display: none;
     position: fixed;
@@ -278,8 +271,7 @@ footer {
     cursor: pointer;
 }
 
-/* ===== CONTACT PREMIUM ===== */
-
+/* ===== CONTACT ===== */
 .contact-container {
     margin-top: 30px;
     display: flex;
