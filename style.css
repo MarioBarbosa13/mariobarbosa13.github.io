@@ -151,6 +151,59 @@ footer {
     margin-top: 100px;
     opacity: 0.6;
 }
+/* ===== EDUCATION TIMELINE ===== */
+.education-timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #22c55e; /* combinando com o verde do site */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -11px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.timeline-content h3 {
+    color: #22c55e;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.timeline-content p {
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+    .timeline-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-content h3 {
+        font-size: 16px;
+    }
+    .timeline-content p {
+        font-size: 13px;
+    }
+}
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
