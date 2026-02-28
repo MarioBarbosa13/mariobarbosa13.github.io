@@ -51,40 +51,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             ],
             experienceTitle: "Experience",
-experiences: [
-    {
-        title: "Geospatial Analyst (Contract – PJ)",
-        company: "Electrical Utility Company – Brazil",
-        period: "Aug 2025 – Present",
-        bullets: [
-            "Spatial validation of electrical distribution networks using QGIS",
-            "Verification of poles and infrastructure datasets",
-            "Classification of existing and missing assets",
-            "Spatial quality control and consistency analysis",
-            "Execution of automated geoprocessing tools with Python scripts"
-        ]
-    },
-    {
-        title: "Administrative Director",
-        company: "MapGeo Jr.",
-        period: "2023 – 2024",
-        bullets: [
-            "Coordination of projects and internal management",
-            "Support in GIS projects and spatial analysis",
-            "Team organization and workflow supervision"
-        ]
-    },
-    {
-        title: "Undergraduate Research Fellow (FACEPE)",
-        company: "Environmental Diagnosis – Botafogo River Basin (PE)",
-        period: "",
-        bullets: [
-            "Environmental data collection and spatial analysis",
-            "Remote sensing and land use mapping",
-            "Support in technical reports and scientific research"
-        ]
-    }
-],
+            experiences: [
+                {
+                    title: "Geospatial Analyst (Contract – PJ)",
+                    company: "Electrical Utility Company – Brazil",
+                    period: "Aug 2025 – Present",
+                    bullets: [
+                        "Spatial validation of electrical distribution networks using QGIS",
+                        "Verification of poles and infrastructure datasets",
+                        "Classification of existing and missing assets",
+                        "Spatial quality control and consistency analysis",
+                        "Execution of automated geoprocessing tools with Python scripts"
+                    ]
+                },
+                {
+                    title: "Administrative Director",
+                    company: "MapGeo Jr.",
+                    period: "2023 – 2024",
+                    bullets: [
+                        "Coordination of projects and internal management",
+                        "Support in GIS projects and spatial analysis",
+                        "Team organization and workflow supervision"
+                    ]
+                },
+                {
+                    title: "Undergraduate Research Fellow (FACEPE)",
+                    company: "Environmental Diagnosis – Botafogo River Basin (PE)",
+                    period: "",
+                    bullets: [
+                        "Environmental data collection and spatial analysis",
+                        "Remote sensing and land use mapping",
+                        "Support in technical reports and scientific research"
+                    ]
+                }
+            ],
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
         },
@@ -133,40 +133,40 @@ experiences: [
                 }
             ],
             experienceTitle: "Experiência",
-experiences: [
-    {
-        title: "Analista de Geoprocessamento (Contrato – PJ)",
-        company: "Companhia de Energia Elétrica – Brasil",
-        period: "Ago 2025 – Atual",
-        bullets: [
-            "Validação espacial de redes de distribuição elétrica utilizando QGIS",
-            "Verificação de bases de postes e malhas de infraestrutura",
-            "Classificação de ativos existentes e inexistentes",
-            "Controle de qualidade espacial e análise de consistência",
-            "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
-        ]
-    },
-    {
-        title: "Diretor Administrativo",
-        company: "MapGeo Jr.",
-        period: "2023 – 2024",
-        bullets: [
-            "Coordenação de projetos e gestão interna",
-            "Apoio em projetos de SIG e análise espacial",
-            "Organização da equipe e supervisão de fluxos de trabalho"
-        ]
-    },
-    {
-        title: "Bolsista de Iniciação Científica (FACEPE)",
-        company: "Diagnóstico Ambiental – Bacia do Rio Botafogo (PE)",
-        period: "",
-        bullets: [
-            "Coleta de dados ambientais e análise espacial",
-            "Sensoriamento remoto e mapeamento de uso do solo",
-            "Apoio na elaboração de relatórios técnicos e pesquisa científica"
-        ]
-    }
-],
+            experiences: [
+                {
+                    title: "Analista de Geoprocessamento (Contrato – PJ)",
+                    company: "Companhia de Energia Elétrica – Brasil",
+                    period: "Ago 2025 – Atual",
+                    bullets: [
+                        "Validação espacial de redes de distribuição elétrica utilizando QGIS",
+                        "Verificação de bases de postes e malhas de infraestrutura",
+                        "Classificação de ativos existentes e inexistentes",
+                        "Controle de qualidade espacial e análise de consistência",
+                        "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
+                    ]
+                },
+                {
+                    title: "Diretor Administrativo",
+                    company: "MapGeo Jr.",
+                    period: "2023 – 2024",
+                    bullets: [
+                        "Coordenação de projetos e gestão interna",
+                        "Apoio em projetos de SIG e análise espacial",
+                        "Organização da equipe e supervisão de fluxos de trabalho"
+                    ]
+                },
+                {
+                    title: "Bolsista de Iniciação Científica (FACEPE)",
+                    company: "Diagnóstico Ambiental – Bacia do Rio Botafogo (PE)",
+                    period: "",
+                    bullets: [
+                        "Coleta de dados ambientais e análise espacial",
+                        "Sensoriamento remoto e mapeamento de uso do solo",
+                        "Apoio na elaboração de relatórios técnicos e pesquisa científica"
+                    ]
+                }
+            ],
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
         }
@@ -190,7 +190,8 @@ experiences: [
             `;
             container.appendChild(card);
         });
-        document.getElementById("articles-title").innerText = translations[lang].articlesTitle;
+        const articlesTitleEl = document.getElementById("articles-title");
+        if (articlesTitleEl) articlesTitleEl.innerText = translations[lang].articlesTitle;
     }
 
     function renderProjects(lang) {
@@ -208,7 +209,8 @@ experiences: [
             `;
             container.appendChild(div);
         });
-        document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
+        const projectsTitleEl = document.getElementById("projects-title");
+        if (projectsTitleEl) projectsTitleEl.innerText = translations[lang].projectsTitle;
     }
 
     function renderExperience(lang) {
@@ -228,7 +230,8 @@ experiences: [
             `;
             container.appendChild(div);
         });
-        document.getElementById("experience-title").innerText = translations[lang].experienceTitle;
+        const expTitleEl = document.getElementById("experience-title");
+        if (expTitleEl) expTitleEl.innerText = translations[lang].experienceTitle;
     }
 
     // ===============================
@@ -236,13 +239,27 @@ experiences: [
     // ===============================
     function setLanguage(lang) {
         const t = translations[lang];
-        document.getElementById("subtitle").innerText = t.subtitle;
-        document.getElementById("about-title").innerText = t.aboutTitle;
-        document.getElementById("about-text").innerHTML = t.aboutText;
-        document.getElementById("education-title").innerText = t.educationTitle;
-        document.getElementById("education-text").innerHTML = t.educationText;
-        document.getElementById("skills-title").innerText = t.skillsTitle;
-        document.getElementById("contact-title").innerText = t.contactTitle;
+
+        const subtitleEl = document.getElementById("subtitle");
+        if(subtitleEl) subtitleEl.innerText = t.subtitle;
+
+        const aboutTitleEl = document.getElementById("about-title");
+        if(aboutTitleEl) aboutTitleEl.innerText = t.aboutTitle;
+
+        const aboutTextEl = document.getElementById("about-text");
+        if(aboutTextEl) aboutTextEl.innerHTML = t.aboutText;
+
+        const educationTitleEl = document.getElementById("education-title");
+        if(educationTitleEl) educationTitleEl.innerText = t.educationTitle;
+
+        const educationTextEl = document.getElementById("education-text");
+        if(educationTextEl) educationTextEl.innerHTML = t.educationText;
+
+        const skillsTitleEl = document.getElementById("skills-title");
+        if(skillsTitleEl) skillsTitleEl.innerText = t.skillsTitle;
+
+        const contactTitleEl = document.getElementById("contact-title");
+        if(contactTitleEl) contactTitleEl.innerText = t.contactTitle;
 
         renderArticles(lang);
         renderProjects(lang);
@@ -278,22 +295,25 @@ experiences: [
     // ===============================
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
-    const closeModal = modal.querySelector(".close");
+    const closeModal = modal ? modal.querySelector(".close") : null;
 
-    document.querySelector(".projects-grid").addEventListener("click", function(e){
-        if(e.target.tagName === "IMG") {
-            modal.style.display = "block";
-            modalImg.src = e.target.src;
-            modalImg.alt = e.target.alt;
-        }
-    });
+    const projectsGrid = document.querySelector(".projects-grid");
+    if(projectsGrid && modal && modalImg && closeModal) {
+        projectsGrid.addEventListener("click", function(e){
+            if(e.target.tagName === "IMG") {
+                modal.style.display = "block";
+                modalImg.src = e.target.src;
+                modalImg.alt = e.target.alt;
+            }
+        });
 
-    closeModal.addEventListener("click", function(){
-        modal.style.display = "none";
-    });
+        closeModal.addEventListener("click", function(){
+            modal.style.display = "none";
+        });
 
-    modal.addEventListener("click", function(e){
-        if(e.target === modal) modal.style.display = "none";
-    });
+        modal.addEventListener("click", function(e){
+            if(e.target === modal) modal.style.display = "none";
+        });
+    }
 
 });
