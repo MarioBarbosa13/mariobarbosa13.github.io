@@ -13,75 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
             educationText: "Bachelor in Geography – Federal University of Pernambuco (UFPE)<br>Master's Student in Geography – UFPE (2026)",
 
             articlesTitle: "Articles",
-            articles: [
-                {
-                    title: "Analysis of Vegetation Dynamics and Urban Expansion in Tamandaré–PE Using Remote Sensing",
-                    summary: "This study examines vegetation dynamics and urban expansion in Tamandaré–PE using remote sensing. Satellite imagery analysis highlights land cover changes and urban growth patterns, providing insights for sustainable planning and environmental monitoring.",
-                    publication: "Cadernos de Geociências – UFBA, 2025",
-                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
-                }
-            ],
+            readArticle: "Read Full Article",
 
             projectsTitle: "Projects",
-projects: [
-    {
-        title: "Land Cover Classification – Wyoming",
-        text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
-        image: "wyoming-cover.jpeg"
-    },
-    {
-        title: "Urban Expansion – Las Vegas Valley",
-        text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
-        image: "las vegas valley.jpeg"
-    },
-    {
-        title: "Water Supply Infrastructure Analysis",
-        text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
-        image: "agua cobertura.jpeg"
-    },
-    {
-        title: "Banana Production in Pernambuco (2023)",
-        text: "Analysis of banana production by municipality in Agreste and Zona da Mata. Includes charts, ranking and interactive map.",
-        image: "banana_hectares.png",
-        link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
-    }
-],
-            experienceTitle: "Experience",
-            experiences: [
-                {
-                    title: "Geospatial Analyst (Contract – PJ)",
-                    company: "Electrical Utility Company – Brazil",
-                    period: "Aug 2025 – Present",
-                    bullets: [
-                        "Spatial validation of electrical distribution networks using QGIS",
-                        "Verification of pole datasets and infrastructure grid meshes",
-                        "Classification of existing and non-existing assets",
-                        "GIS-based quality control and spatial consistency analysis",
-                        "Execution of automated geoprocessing tools using Python scripts"
-                    ]
-                },
-                {
-                    title: "Administrative Director",
-                    company: "MapGeo Jr.",
-                    period: "2023 – 2024",
-                    bullets: [
-                        "Project coordination and internal management",
-                        "Support in GIS and spatial analysis projects",
-                        "Team organization and workflow supervision"
-                    ]
-                },
-                {
-                    title: "Scientific Research Scholar (FACEPE)",
-                    company: "Environmental Diagnosis – Botafogo River Basin (PE)",
-                    period: "",
-                    bullets: [
-                        "Environmental data collection and spatial analysis",
-                        "Remote sensing and land use mapping",
-                        "Support in technical reporting and scientific research"
-                    ]
-                }
-            ],
+            openNotebook: "Open Interactive Notebook",
 
+            experienceTitle: "Experience",
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
         },
@@ -94,75 +31,12 @@ projects: [
             educationText: "Bacharel em Geografia – Universidade Federal de Pernambuco (UFPE)<br>Mestrando em Geografia – UFPE (2026)",
 
             articlesTitle: "Artigos",
-            articles: [
-                {
-                    title: "A Análise da Dinâmica da Vegetação e da Expansão Urbana em Tamandaré–PE por Meio do Sensoriamento Remoto",
-                    summary: "Este estudo analisa a dinâmica da vegetação e a expansão urbana em Tamandaré–PE por meio de sensoriamento remoto. A análise de imagens de satélite evidencia mudanças na cobertura do solo e padrões de crescimento urbano, fornecendo informações para planejamento sustentável e monitoramento ambiental.",
-                    publication: "Cadernos de Geociências – UFBA, 2025",
-                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
-                }
-            ],
+            readArticle: "Ler Artigo Completo",
 
             projectsTitle: "Projetos",
-projects: [
-    {
-        title: "Classificação de Uso e Cobertura da Terra – Wyoming",
-        text: "Mapeamento de uso e cobertura da terra utilizando imagens de satélite e técnicas de SIG para análise ambiental.",
-        image: "wyoming-cover.jpeg"
-    },
-    {
-        title: "Expansão Urbana – Vale de Las Vegas",
-        text: "Análise espacial dos padrões de crescimento urbano com sensoriamento remoto e processamento geoespacial.",
-        image: "las vegas valley.jpeg"
-    },
-    {
-        title: "Análise da Infraestrutura de Abastecimento de Água",
-        text: "Avaliação espacial da infraestrutura de abastecimento e cobertura de serviço utilizando ferramentas SIG.",
-        image: "agua cobertura.jpeg"
-    },
-    {
-        title: "Produção de Banana em Pernambuco (2023)",
-        text: "Análise da produção de banana por município no Agreste e Zona da Mata. Inclui gráficos, ranking e mapa interativo.",
-        image: "banana_hectares.png",
-        link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
-    }
-],
-            experienceTitle: "Experiência",
-            experiences: [
-                {
-                    title: "Analista de Geoprocessamento (Contrato – PJ)",
-                    company: "Companhia de Energia Elétrica – Brasil",
-                    period: "Ago 2024 – Atual",
-                    bullets: [
-                        "Validação espacial de redes de distribuição elétrica utilizando QGIS",
-                        "Verificação de bases de postes e malhas de infraestrutura",
-                        "Classificação de ativos existentes e inexistentes",
-                        "Controle de qualidade espacial e análise de consistência",
-                        "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
-                    ]
-                },
-                {
-                    title: "Diretor Administrativo",
-                    company: "MapGeo Jr.",
-                    period: "2023 – 2024",
-                    bullets: [
-                        "Coordenação de projetos e gestão interna",
-                        "Apoio em projetos de SIG e análise espacial",
-                        "Organização da equipe e supervisão de fluxos de trabalho"
-                    ]
-                },
-                {
-                    title: "Bolsista de Iniciação Científica (FACEPE)",
-                    company: "Diagnóstico Ambiental – Bacia do Rio Botafogo (PE)",
-                    period: "",
-                    bullets: [
-                        "Coleta de dados ambientais e análise espacial",
-                        "Sensoriamento remoto e mapeamento de uso do solo",
-                        "Apoio na elaboração de relatórios técnicos e pesquisa científica"
-                    ]
-                }
-            ],
+            openNotebook: "Abrir Notebook Interativo",
 
+            experienceTitle: "Experiência",
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
         }
@@ -171,17 +45,23 @@ projects: [
     // ===== RENDER ARTICLES =====
     function renderArticles(lang) {
         const container = document.getElementById("articlesContainer");
+        if (!container) return;
+
         container.innerHTML = "";
 
-        translations[lang].articles.forEach(article => {
+        translationsData[lang].articles.forEach(article => {
             const card = document.createElement("div");
-            card.className = "bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-xl transition";
+            card.className = "article-card";
+
             card.innerHTML = `
                 <h3>${article.title}</h3>
                 <p>${article.summary}</p>
                 <p>${article.publication}</p>
-                <a href="${article.link}" target="_blank">Read Full Article</a>
+                <a href="${article.link}" target="_blank">
+                    ${translations[lang].readArticle}
+                </a>
             `;
+
             container.appendChild(card);
         });
 
@@ -191,9 +71,11 @@ projects: [
     // ===== RENDER EXPERIENCE =====
     function renderExperience(lang) {
         const container = document.getElementById("experience-container");
+        if (!container) return;
+
         container.innerHTML = "";
 
-        translations[lang].experiences.forEach(exp => {
+        translationsData[lang].experiences.forEach(exp => {
             const div = document.createElement("div");
             div.className = "experience-item";
 
@@ -213,34 +95,43 @@ projects: [
 
             container.appendChild(div);
         });
+
+        document.getElementById("experience-title").innerText = translations[lang].experienceTitle;
     }
-// ===== RENDER PROJECTS =====
-function renderProjects(lang) {
-    const container = document.querySelector(".projects-grid");
-    container.innerHTML = "";
 
-    translations[lang].projects.forEach(project => {
-        const div = document.createElement("div");
-        div.className = "project-card";
+    // ===== RENDER PROJECTS =====
+    function renderProjects(lang) {
+        const container = document.querySelector(".projects-grid");
+        if (!container) return;
 
-        div.innerHTML = `
-            <img src="${project.image}" alt="${project.title}">
-            <h3>${project.title}</h3>
-            <p>${project.text}</p>
-            ${project.link ? `
-                <a href="${project.link}" target="_blank">
-                    <button>
-                        📊 ${lang === "pt" ? "Abrir notebook interativo" : "Open Interactive Notebook"}
-                    </button>
-                </a>
-            ` : ""}
-        `;
+        container.innerHTML = "";
 
-        container.appendChild(div);
-    });
-}
+        translationsData[lang].projects.forEach(project => {
+            const div = document.createElement("div");
+            div.className = "project-card";
+
+            div.innerHTML = `
+                <img src="${project.image}" alt="${project.title}">
+                <h3>${project.title}</h3>
+                <p>${project.text}</p>
+                ${project.link ? `
+                    <a href="${project.link}" 
+                       target="_blank" 
+                       class="project-btn">
+                       📊 ${translations[lang].openNotebook}
+                    </a>
+                ` : ""}
+            `;
+
+            container.appendChild(div);
+        });
+
+        document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
+    }
+
     // ===== SET LANGUAGE =====
     function setLanguage(lang) {
+
         const t = translations[lang];
 
         function safeSetText(id, value, isHTML = false) {
@@ -256,8 +147,6 @@ function renderProjects(lang) {
         safeSetText("about-text", t.aboutText);
         safeSetText("education-title", t.educationTitle);
         safeSetText("education-text", t.educationText, true);
-        safeSetText("projects-title", t.projectsTitle);
-        safeSetText("experience-title", t.experienceTitle);
         safeSetText("skills-title", t.skillsTitle);
         safeSetText("contact-title", t.contactTitle);
 
@@ -266,13 +155,13 @@ function renderProjects(lang) {
         renderProjects(lang);
 
         if (lang === "pt") {
-            cvEn.style.display = "none";
-            cvPt.style.display = "inline-block";
-            toggle.checked = true;
+            if (cvEn) cvEn.style.display = "none";
+            if (cvPt) cvPt.style.display = "inline-block";
+            if (toggle) toggle.checked = true;
         } else {
-            cvEn.style.display = "inline-block";
-            cvPt.style.display = "none";
-            toggle.checked = false;
+            if (cvEn) cvEn.style.display = "inline-block";
+            if (cvPt) cvPt.style.display = "none";
+            if (toggle) toggle.checked = false;
         }
 
         localStorage.setItem("siteLanguage", lang);
@@ -284,8 +173,10 @@ function renderProjects(lang) {
     if (savedLanguage) setLanguage(savedLanguage);
     else setLanguage((navigator.language || navigator.userLanguage).startsWith("pt") ? "pt" : "en");
 
-    if (toggle) toggle.addEventListener("change", function () {
-        setLanguage(this.checked ? "pt" : "en");
-    });
+    if (toggle) {
+        toggle.addEventListener("change", function () {
+            setLanguage(this.checked ? "pt" : "en");
+        });
+    }
 
 });
