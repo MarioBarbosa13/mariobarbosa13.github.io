@@ -132,7 +132,7 @@ projects: [
                 {
                     title: "Analista de Geoprocessamento (Contrato – PJ)",
                     company: "Companhia de Energia Elétrica – Brasil",
-                    period: "Ago 2024 – Atual",
+                    period: "Ago 2025 – Atual",
                     bullets: [
                         "Validação espacial de redes de distribuição elétrica utilizando QGIS",
                         "Verificação de bases de postes e malhas de infraestrutura",
@@ -174,7 +174,7 @@ projects: [
         if (!container) return;
         container.innerHTML = "";
 
-        translationsData[lang].articles.forEach(article => {
+        translations[lang].articles.forEach(article => {
             const card = document.createElement("div");
             card.className = "article-card";
 
@@ -199,7 +199,7 @@ projects: [
         if (!container) return;
         container.innerHTML = "";
 
-        translationsData[lang].experiences.forEach(exp => {
+        translations[lang].experiences.forEach(exp => {
             const div = document.createElement("div");
             div.className = "experience-item";
 
@@ -227,7 +227,7 @@ projects: [
         if (!container) return;
         container.innerHTML = "";
 
-        translationsData[lang].projects.forEach(project => {
+        translations[lang].projects.forEach(project => {
             const div = document.createElement("div");
             div.className = "project-card";
 
