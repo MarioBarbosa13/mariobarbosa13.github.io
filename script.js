@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
             aboutTitle: "About Me",
             aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
-            educationTitle: "Education",
-            educationText: "Bachelor in Geography – UFPE<br>Master's Student in Geography – UFPE (2026)",
+            education: [
+    { title: "Bachelor in Geography", period: "UFPE – 2018–2022" },
+    { title: "Master's Student in Geography", period: "UFPE – 2026" }
+  ],
             readArticle: "Read Full Article",
             openNotebook: "Open Interactive Notebook",
             articlesTitle: "Articles",
@@ -233,7 +235,27 @@ document.addEventListener("DOMContentLoaded", function () {
         const expTitleEl = document.getElementById("experience-title");
         if (expTitleEl) expTitleEl.innerText = translations[lang].experienceTitle;
     }
+function renderEducation(lang) {
+    const container = document.querySelector(".education-timeline");
+    if(!container) return;
+    container.innerHTML = "";
 
+    translations[lang].education.forEach(edu => {
+        const div = document.createElement("div");
+        div.className = "timeline-item";
+        div.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>${edu.title}</h3>
+                <p>${edu.period}</p>
+            </div>
+        `;
+        container.appendChild(div);
+    });
+
+    const titleEl = document.getElementById("education-title");
+    if(titleEl) titleEl.innerText = translations[lang].educationTitle;
+}
     // ===============================
     // Função para definir idioma
     // ===============================
