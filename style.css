@@ -316,7 +316,6 @@ footer {
     font-size: 20px;
 }
 /* ===== EXPERIENCE ===== */
-/* ===== EXPERIENCE ===== */
 
 .experience-item {
     margin-bottom: 50px;
@@ -336,6 +335,7 @@ footer {
 .experience-period {
     font-size: 14px;
     opacity: 0.6;
+    margin-bottom: 10px;
 }
 
 .experience-item ul {
@@ -346,6 +346,45 @@ footer {
 .experience-item li {
     margin-bottom: 8px;
     opacity: 0.85;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVO PARA EXPERIENCE */
+@media (max-width: 768px) {
+    .experience-item h3 {
+        font-size: 20px;
+    }
+
+    .experience-company {
+        font-size: 15px;
+    }
+
+    .experience-period {
+        font-size: 13px;
+    }
+
+    .experience-item li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-item h3 {
+        font-size: 18px;
+    }
+
+    .experience-company {
+        font-size: 14px;
+    }
+
+    .experience-period {
+        font-size: 12px;
+    }
+
+    .experience-item li {
+        font-size: 13px;
+    }
 }
 .project-btn {
     display: inline-block;
