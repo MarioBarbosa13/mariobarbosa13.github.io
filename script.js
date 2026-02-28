@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         en: {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
             aboutTitle: "About Me",
-            aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis.",
+            aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
             educationTitle: "Education",
             educationText: "Bachelor in Geography – UFPE<br>Master's Student in Geography – UFPE (2026)",
             readArticle: "Read Full Article",
@@ -25,6 +25,24 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
             projectsTitle: "Projects",
             projects: [
+                {
+                    title: "Land Cover Classification – Wyoming",
+                    text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
+                    image: "wyoming-cover.jpeg",
+                    link: ""
+                },
+                {
+                    title: "Urban Expansion – Las Vegas Valley",
+                    text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
+                    image: "las vegas valley.jpeg",
+                    link: ""
+                },
+                {
+                    title: "Water Supply Infrastructure Analysis",
+                    text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
+                    image: "agua cobertura.jpeg",
+                    link: ""
+                },
                 {
                     title: "Banana Production in Pernambuco (2023)",
                     text: "Municipal production analysis with interactive map.",
@@ -51,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pt: {
             subtitle: "Analista de Geoprocessamento especializado em Sensoriamento Remoto",
             aboutTitle: "Sobre Mim",
-            aboutText: "Analista de Geoprocessamento especializado em SIG e análise ambiental.",
+            aboutText: "Analista de Geoprocessamento especializado em SIG, Sensoriamento Remoto e Análise Ambiental. Habilidades em modelagem espacial, classificação de uso e cobertura do solo e interpretação de imagens de satélite. Focado em variabilidade climática, monitoramento ambiental e planejamento territorial.",
             educationTitle: "Formação",
             educationText: "Bacharel em Geografia – UFPE<br>Mestrando em Geografia – UFPE (2026)",
             readArticle: "Ler Artigo Completo",
@@ -67,6 +85,24 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
             projectsTitle: "Projetos",
             projects: [
+                {
+                    title: "Classificação de Cobertura do Solo – Wyoming",
+                    text: "Mapeamento e classificação de cobertura do solo usando imagens de satélite e GIS para análise ambiental.",
+                    image: "wyoming-cover.jpeg",
+                    link: ""
+                },
+                {
+                    title: "Expansão Urbana – Vale de Las Vegas",
+                    text: "Análise espacial do crescimento urbano usando sensoriamento remoto e dados geoespaciais.",
+                    image: "las vegas valley.jpeg",
+                    link: ""
+                },
+                {
+                    title: "Análise de Infraestrutura de Abastecimento de Água",
+                    text: "Avaliação espacial da infraestrutura e cobertura de serviços utilizando ferramentas GIS para planejamento territorial.",
+                    image: "agua cobertura.jpeg",
+                    link: ""
+                },
                 {
                     title: "Produção de Banana em Pernambuco (2023)",
                     text: "Análise municipal com mapa interativo.",
@@ -92,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // Render Articles
     function renderArticles(lang) {
         const container = document.getElementById("articlesContainer");
         if (!container) return;
@@ -111,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("articles-title").innerText = translations[lang].articlesTitle;
     }
 
-    // Render Projects
     function renderProjects(lang) {
         const container = document.querySelector(".projects-grid");
         if (!container) return;
@@ -130,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
     }
 
-    // Render Experience
     function renderExperience(lang) {
         const container = document.getElementById("experience-container");
         if (!container) return;
@@ -151,13 +184,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("experience-title").innerText = translations[lang].experienceTitle;
     }
 
-    // Set Language
     function setLanguage(lang) {
         const t = translations[lang];
-
         document.getElementById("subtitle").innerText = t.subtitle;
         document.getElementById("about-title").innerText = t.aboutTitle;
-        document.getElementById("about-text").innerHTML = t.aboutText; // use innerHTML
+        document.getElementById("about-text").innerHTML = t.aboutText;
         document.getElementById("education-title").innerText = t.educationTitle;
         document.getElementById("education-text").innerHTML = t.educationText;
         document.getElementById("skills-title").innerText = t.skillsTitle;
@@ -167,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderProjects(lang);
         renderExperience(lang);
 
-        // Mostrar apenas CV do idioma
+        // CV toggle
         if(lang === "pt") {
             if(cvEn) cvEn.style.display = "none";
             if(cvPt) cvPt.style.display = "inline-block";
@@ -181,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("siteLanguage", lang);
     }
 
-    // Inicializar idioma
+    // Inicializa idioma
     const savedLanguage = localStorage.getItem("siteLanguage");
     setLanguage(savedLanguage || (navigator.language.startsWith("pt") ? "pt" : "en"));
 
