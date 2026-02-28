@@ -173,7 +173,9 @@ footer {
     background: #22c55e;
     border-radius: 50%;
 }
-
+.timeline-content {
+    margin-left: 30px; /* espaço entre a linha/bole e o conteúdo */
+}
 .timeline-content h3 {
     color: #22c55e;
     margin-bottom: 5px;
