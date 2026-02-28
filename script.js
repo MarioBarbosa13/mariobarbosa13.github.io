@@ -5,12 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("languageToggle");
 
     const translations = {
+
         en: {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
             aboutTitle: "About Me",
             aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
             educationTitle: "Education",
             educationText: "Bachelor in Geography – Federal University of Pernambuco (UFPE)<br>Master's Student in Geography – UFPE (2026)",
+
+            readArticle: "Read Full Article",
+            openNotebook: "Open Interactive Notebook",
 
             articlesTitle: "Articles",
             articles: [
@@ -23,29 +27,30 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
 
             projectsTitle: "Projects",
-projects: [
-    {
-        title: "Land Cover Classification – Wyoming",
-        text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
-        image: "wyoming-cover.jpeg"
-    },
-    {
-        title: "Urban Expansion – Las Vegas Valley",
-        text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
-        image: "las vegas valley.jpeg"
-    },
-    {
-        title: "Water Supply Infrastructure Analysis",
-        text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
-        image: "agua cobertura.jpeg"
-    },
-    {
-        title: "Banana Production in Pernambuco (2023)",
-        text: "Analysis of banana production by municipality in Agreste and Zona da Mata. Includes charts, ranking and interactive map.",
-        image: "banana_hectares.png",
-        link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
-    }
-],
+            projects: [
+                {
+                    title: "Land Cover Classification – Wyoming",
+                    text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
+                    image: "wyoming-cover.jpeg"
+                },
+                {
+                    title: "Urban Expansion – Las Vegas Valley",
+                    text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
+                    image: "las vegas valley.jpeg"
+                },
+                {
+                    title: "Water Supply Infrastructure Analysis",
+                    text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
+                    image: "agua cobertura.jpeg"
+                },
+                {
+                    title: "Banana Production in Pernambuco (2023)",
+                    text: "Analysis of banana production by municipality in Agreste and Zona da Mata. Includes charts, ranking and interactive map.",
+                    image: "banana_hectares.png",
+                    link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
+                }
+            ],
+
             experienceTitle: "Experience",
             experiences: [
                 {
@@ -58,26 +63,6 @@ projects: [
                         "Classification of existing and non-existing assets",
                         "GIS-based quality control and spatial consistency analysis",
                         "Execution of automated geoprocessing tools using Python scripts"
-                    ]
-                },
-                {
-                    title: "Administrative Director",
-                    company: "MapGeo Jr.",
-                    period: "2023 – 2024",
-                    bullets: [
-                        "Project coordination and internal management",
-                        "Support in GIS and spatial analysis projects",
-                        "Team organization and workflow supervision"
-                    ]
-                },
-                {
-                    title: "Scientific Research Scholar (FACEPE)",
-                    company: "Environmental Diagnosis – Botafogo River Basin (PE)",
-                    period: "",
-                    bullets: [
-                        "Environmental data collection and spatial analysis",
-                        "Remote sensing and land use mapping",
-                        "Support in technical reporting and scientific research"
                     ]
                 }
             ],
@@ -93,6 +78,9 @@ projects: [
             educationTitle: "Formação",
             educationText: "Bacharel em Geografia – Universidade Federal de Pernambuco (UFPE)<br>Mestrando em Geografia – UFPE (2026)",
 
+            readArticle: "Ler Artigo Completo",
+            openNotebook: "Abrir Notebook Interativo",
+
             articlesTitle: "Artigos",
             articles: [
                 {
@@ -104,29 +92,30 @@ projects: [
             ],
 
             projectsTitle: "Projetos",
-projects: [
-    {
-        title: "Classificação de Uso e Cobertura da Terra – Wyoming",
-        text: "Mapeamento de uso e cobertura da terra utilizando imagens de satélite e técnicas de SIG para análise ambiental.",
-        image: "wyoming-cover.jpeg"
-    },
-    {
-        title: "Expansão Urbana – Vale de Las Vegas",
-        text: "Análise espacial dos padrões de crescimento urbano com sensoriamento remoto e processamento geoespacial.",
-        image: "las vegas valley.jpeg"
-    },
-    {
-        title: "Análise da Infraestrutura de Abastecimento de Água",
-        text: "Avaliação espacial da infraestrutura de abastecimento e cobertura de serviço utilizando ferramentas SIG.",
-        image: "agua cobertura.jpeg"
-    },
-    {
-        title: "Produção de Banana em Pernambuco (2023)",
-        text: "Análise da produção de banana por município no Agreste e Zona da Mata. Inclui gráficos, ranking e mapa interativo.",
-        image: "banana_hectares.png",
-        link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
-    }
-],
+            projects: [
+                {
+                    title: "Classificação de Uso e Cobertura da Terra – Wyoming",
+                    text: "Mapeamento de uso e cobertura da terra utilizando imagens de satélite e técnicas de SIG para análise ambiental.",
+                    image: "wyoming-cover.jpeg"
+                },
+                {
+                    title: "Expansão Urbana – Vale de Las Vegas",
+                    text: "Análise espacial dos padrões de crescimento urbano com sensoriamento remoto e processamento geoespacial.",
+                    image: "las vegas valley.jpeg"
+                },
+                {
+                    title: "Análise da Infraestrutura de Abastecimento de Água",
+                    text: "Avaliação espacial da infraestrutura de abastecimento e cobertura de serviço utilizando ferramentas SIG.",
+                    image: "agua cobertura.jpeg"
+                },
+                {
+                    title: "Produção de Banana em Pernambuco (2023)",
+                    text: "Análise da produção de banana por município no Agreste e Zona da Mata. Inclui gráficos, ranking e mapa interativo.",
+                    image: "banana_hectares.png",
+                    link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
+                }
+            ],
+
             experienceTitle: "Experiência",
             experiences: [
                 {
@@ -140,26 +129,6 @@ projects: [
                         "Controle de qualidade espacial e análise de consistência",
                         "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
                     ]
-                },
-                {
-                    title: "Diretor Administrativo",
-                    company: "MapGeo Jr.",
-                    period: "2023 – 2024",
-                    bullets: [
-                        "Coordenação de projetos e gestão interna",
-                        "Apoio em projetos de SIG e análise espacial",
-                        "Organização da equipe e supervisão de fluxos de trabalho"
-                    ]
-                },
-                {
-                    title: "Bolsista de Iniciação Científica (FACEPE)",
-                    company: "Diagnóstico Ambiental – Bacia do Rio Botafogo (PE)",
-                    period: "",
-                    bullets: [
-                        "Coleta de dados ambientais e análise espacial",
-                        "Sensoriamento remoto e mapeamento de uso do solo",
-                        "Apoio na elaboração de relatórios técnicos e pesquisa científica"
-                    ]
                 }
             ],
 
@@ -168,7 +137,6 @@ projects: [
         }
     };
 
-    // ===== RENDER ARTICLES =====
     function renderArticles(lang) {
         const container = document.getElementById("articlesContainer");
         if (!container) return;
@@ -193,35 +161,6 @@ projects: [
         document.getElementById("articles-title").innerText = translations[lang].articlesTitle;
     }
 
-    // ===== RENDER EXPERIENCE =====
-    function renderExperience(lang) {
-        const container = document.getElementById("experience-container");
-        if (!container) return;
-        container.innerHTML = "";
-
-        translations[lang].experiences.forEach(exp => {
-            const div = document.createElement("div");
-            div.className = "experience-item";
-
-            let bulletsHTML = "";
-            exp.bullets.forEach(b => bulletsHTML += `<li>${b}</li>`);
-
-            div.innerHTML = `
-                <p>
-                    <strong>${exp.title}</strong><br>
-                    ${exp.company}<br>
-                    ${exp.period}
-                </p>
-                <ul>${bulletsHTML}</ul>
-            `;
-
-            container.appendChild(div);
-        });
-
-        document.getElementById("experience-title").innerText = translations[lang].experienceTitle;
-    }
-
-    // ===== RENDER PROJECTS =====
     function renderProjects(lang) {
         const container = document.querySelector(".projects-grid");
         if (!container) return;
@@ -248,44 +187,25 @@ projects: [
         document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
     }
 
-    // ===== SET LANGUAGE =====
     function setLanguage(lang) {
         const t = translations[lang];
 
-        function safeSetText(id, value, isHTML = false) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            isHTML ? el.innerHTML = value : el.innerText = value;
-        }
-
-        safeSetText("subtitle", t.subtitle);
-        safeSetText("about-title", t.aboutTitle);
-        safeSetText("about-text", t.aboutText);
-        safeSetText("education-title", t.educationTitle);
-        safeSetText("education-text", t.educationText, true);
-        safeSetText("skills-title", t.skillsTitle);
-        safeSetText("contact-title", t.contactTitle);
+        document.getElementById("subtitle").innerText = t.subtitle;
+        document.getElementById("about-title").innerText = t.aboutTitle;
+        document.getElementById("about-text").innerText = t.aboutText;
+        document.getElementById("education-title").innerText = t.educationTitle;
+        document.getElementById("education-text").innerHTML = t.educationText;
+        document.getElementById("skills-title").innerText = t.skillsTitle;
+        document.getElementById("contact-title").innerText = t.contactTitle;
 
         renderArticles(lang);
-        renderExperience(lang);
         renderProjects(lang);
-
-        if (lang === "pt") {
-            if (cvEn) cvEn.style.display = "none";
-            if (cvPt) cvPt.style.display = "inline-block";
-            if (toggle) toggle.checked = true;
-        } else {
-            if (cvEn) cvEn.style.display = "inline-block";
-            if (cvPt) cvPt.style.display = "none";
-            if (toggle) toggle.checked = false;
-        }
 
         localStorage.setItem("siteLanguage", lang);
     }
 
     const savedLanguage = localStorage.getItem("siteLanguage");
-    if (savedLanguage) setLanguage(savedLanguage);
-    else setLanguage(navigator.language.startsWith("pt") ? "pt" : "en");
+    setLanguage(savedLanguage || (navigator.language.startsWith("pt") ? "pt" : "en"));
 
     if (toggle) {
         toggle.addEventListener("change", function () {
