@@ -51,7 +51,7 @@ projects: [
                 {
                     title: "Geospatial Analyst (Contract – PJ)",
                     company: "Electrical Utility Company – Brazil",
-                    period: "Aug 2024 – Present",
+                    period: "Aug 2025 – Present",
                     bullets: [
                         "Spatial validation of electrical distribution networks using QGIS",
                         "Verification of pole datasets and infrastructure grid meshes",
