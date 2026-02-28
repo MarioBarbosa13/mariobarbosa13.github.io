@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
         en: {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
             aboutTitle: "About Me",
-            aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
+            aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis.",
             educationTitle: "Education",
-            educationText: "Bachelor in Geography – Federal University of Pernambuco (UFPE)<br>Master's Student in Geography – UFPE (2026)",
+            educationText: "Bachelor in Geography – UFPE<br>Master's Student in Geography – UFPE (2026)",
 
             readArticle: "Read Full Article",
             openNotebook: "Open Interactive Notebook",
@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             articlesTitle: "Articles",
             articles: [
                 {
-                    title: "Analysis of Vegetation Dynamics and Urban Expansion in Tamandaré–PE Using Remote Sensing",
-                    summary: "This study examines vegetation dynamics and urban expansion in Tamandaré–PE using remote sensing. Satellite imagery analysis highlights land cover changes and urban growth patterns, providing insights for sustainable planning and environmental monitoring.",
+                    title: "Analysis of Vegetation Dynamics and Urban Expansion in Tamandaré–PE",
+                    summary: "Remote sensing analysis of land cover and urban growth.",
                     publication: "Cadernos de Geociências – UFBA, 2025",
                     link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
                 }
@@ -29,23 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
             projectsTitle: "Projects",
             projects: [
                 {
-                    title: "Land Cover Classification – Wyoming",
-                    text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
-                    image: "wyoming-cover.jpeg"
-                },
-                {
-                    title: "Urban Expansion – Las Vegas Valley",
-                    text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
-                    image: "las vegas valley.jpeg"
-                },
-                {
-                    title: "Water Supply Infrastructure Analysis",
-                    text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
-                    image: "agua cobertura.jpeg"
-                },
-                {
                     title: "Banana Production in Pernambuco (2023)",
-                    text: "Analysis of banana production by municipality in Agreste and Zona da Mata. Includes charts, ranking and interactive map.",
+                    text: "Municipal production analysis with interactive map.",
                     image: "banana_hectares.png",
                     link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
                 }
@@ -58,11 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     company: "Electrical Utility Company – Brazil",
                     period: "Aug 2025 – Present",
                     bullets: [
-                        "Spatial validation of electrical distribution networks using QGIS",
-                        "Verification of pole datasets and infrastructure grid meshes",
-                        "Classification of existing and non-existing assets",
-                        "GIS-based quality control and spatial consistency analysis",
-                        "Execution of automated geoprocessing tools using Python scripts"
+                        "Spatial validation using QGIS",
+                        "Infrastructure dataset verification",
+                        "Python geoprocessing automation"
                     ]
                 }
             ],
@@ -74,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
         pt: {
             subtitle: "Analista de Geoprocessamento especializado em Sensoriamento Remoto",
             aboutTitle: "Sobre Mim",
-            aboutText: "Analista de Geoprocessamento especializado em SIG, Sensoriamento Remoto e Análise de Dados Ambientais. Experiência em modelagem espacial, classificação de uso e cobertura do solo e interpretação de imagens de satélite. Atuação voltada à variabilidade climática, monitoramento ambiental e planejamento territorial.",
+            aboutText: "Analista de Geoprocessamento especializado em SIG e análise ambiental.",
             educationTitle: "Formação",
-            educationText: "Bacharel em Geografia – Universidade Federal de Pernambuco (UFPE)<br>Mestrando em Geografia – UFPE (2026)",
+            educationText: "Bacharel em Geografia – UFPE<br>Mestrando em Geografia – UFPE (2026)",
 
             readArticle: "Ler Artigo Completo",
             openNotebook: "Abrir Notebook Interativo",
@@ -84,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
             articlesTitle: "Artigos",
             articles: [
                 {
-                    title: "A Análise da Dinâmica da Vegetação e da Expansão Urbana em Tamandaré–PE por Meio do Sensoriamento Remoto",
-                    summary: "Este estudo analisa a dinâmica da vegetação e a expansão urbana em Tamandaré–PE por meio de sensoriamento remoto. A análise de imagens de satélite evidencia mudanças na cobertura do solo e padrões de crescimento urbano, fornecendo informações para planejamento sustentável e monitoramento ambiental.",
+                    title: "Análise da Dinâmica da Vegetação e Expansão Urbana em Tamandaré–PE",
+                    summary: "Análise com sensoriamento remoto.",
                     publication: "Cadernos de Geociências – UFBA, 2025",
                     link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
                 }
@@ -94,23 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
             projectsTitle: "Projetos",
             projects: [
                 {
-                    title: "Classificação de Uso e Cobertura da Terra – Wyoming",
-                    text: "Mapeamento de uso e cobertura da terra utilizando imagens de satélite e técnicas de SIG para análise ambiental.",
-                    image: "wyoming-cover.jpeg"
-                },
-                {
-                    title: "Expansão Urbana – Vale de Las Vegas",
-                    text: "Análise espacial dos padrões de crescimento urbano com sensoriamento remoto e processamento geoespacial.",
-                    image: "las vegas valley.jpeg"
-                },
-                {
-                    title: "Análise da Infraestrutura de Abastecimento de Água",
-                    text: "Avaliação espacial da infraestrutura de abastecimento e cobertura de serviço utilizando ferramentas SIG.",
-                    image: "agua cobertura.jpeg"
-                },
-                {
                     title: "Produção de Banana em Pernambuco (2023)",
-                    text: "Análise da produção de banana por município no Agreste e Zona da Mata. Inclui gráficos, ranking e mapa interativo.",
+                    text: "Análise municipal com mapa interativo.",
                     image: "banana_hectares.png",
                     link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
                 }
@@ -123,11 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     company: "Companhia de Energia Elétrica – Brasil",
                     period: "Ago 2025 – Atual",
                     bullets: [
-                        "Validação espacial de redes de distribuição elétrica utilizando QGIS",
-                        "Verificação de bases de postes e malhas de infraestrutura",
-                        "Classificação de ativos existentes e inexistentes",
-                        "Controle de qualidade espacial e análise de consistência",
-                        "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
+                        "Validação espacial com QGIS",
+                        "Verificação de infraestrutura",
+                        "Automação com Python"
                     ]
                 }
             ],
@@ -187,7 +153,35 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
     }
 
+    function renderExperience(lang) {
+        const container = document.getElementById("experience-container");
+        if (!container) return;
+        container.innerHTML = "";
+
+        translations[lang].experiences.forEach(exp => {
+            const div = document.createElement("div");
+            div.className = "experience-item";
+
+            let bullets = "";
+            exp.bullets.forEach(b => bullets += `<li>${b}</li>`);
+
+            div.innerHTML = `
+                <p>
+                    <strong>${exp.title}</strong><br>
+                    ${exp.company}<br>
+                    ${exp.period}
+                </p>
+                <ul>${bullets}</ul>
+            `;
+
+            container.appendChild(div);
+        });
+
+        document.getElementById("experience-title").innerText = translations[lang].experienceTitle;
+    }
+
     function setLanguage(lang) {
+
         const t = translations[lang];
 
         document.getElementById("subtitle").innerText = t.subtitle;
@@ -200,6 +194,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         renderArticles(lang);
         renderProjects(lang);
+        renderExperience(lang);
+
+        // controle dos currículos
+        if (lang === "pt") {
+            if (cvEn) cvEn.style.display = "none";
+            if (cvPt) cvPt.style.display = "inline-block";
+            if (toggle) toggle.checked = true;
+        } else {
+            if (cvEn) cvEn.style.display = "inline-block";
+            if (cvPt) cvPt.style.display = "none";
+            if (toggle) toggle.checked = false;
+        }
 
         localStorage.setItem("siteLanguage", lang);
     }
