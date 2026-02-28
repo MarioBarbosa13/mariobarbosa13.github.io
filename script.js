@@ -128,6 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
+    // ===============================
+    // Funções de renderização
+    // ===============================
     function renderArticles(lang) {
         const container = document.getElementById("articlesContainer");
         if (!container) return;
@@ -154,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const div = document.createElement("div");
             div.className = "project-card";
             div.innerHTML = `
-                <img src="${project.image}" alt="${project.title}">
+                <img src="${project.image}" alt="${project.title}" style="cursor:pointer;">
                 <h3>${project.title}</h3>
                 <p>${project.text}</p>
                 ${project.link ? `<a href="${project.link}" target="_blank" class="project-btn">📊 ${translations[lang].openNotebook}</a>` : ""}
@@ -184,6 +187,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("experience-title").innerText = translations[lang].experienceTitle;
     }
 
+    // ===============================
+    // Função para definir idioma
+    // ===============================
     function setLanguage(lang) {
         const t = translations[lang];
         document.getElementById("subtitle").innerText = t.subtitle;
@@ -222,5 +228,28 @@ document.addEventListener("DOMContentLoaded", function () {
             setLanguage(this.checked ? "pt" : "en");
         });
     }
+
+    // ===============================
+    // Modal para zoom das imagens dos projetos
+    // ===============================
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeModal = modal.querySelector(".close");
+
+    document.querySelector(".projects-grid").addEventListener("click", function(e){
+        if(e.target.tagName === "IMG") {
+            modal.style.display = "block";
+            modalImg.src = e.target.src;
+            modalImg.alt = e.target.alt;
+        }
+    });
+
+    closeModal.addEventListener("click", function(){
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function(e){
+        if(e.target === modal) modal.style.display = "none";
+    });
 
 });
