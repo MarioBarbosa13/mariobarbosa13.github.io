@@ -28,19 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
             projectsTitle: "Projects",
             projects: [
                 {
-                    title: "Land Cover Classification – Wyoming",
+                    title: "Land Cover Classification – Wyoming (2024)",
                     text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
                     image: "wyoming-cover.jpeg",
                     link: ""
                 },
                 {
-                    title: "Urban Expansion – Las Vegas Valley",
+                    title: "Urban Expansion – Las Vegas Valley (2024)",
                     text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
                     image: "las vegas valley.jpeg",
                     link: ""
                 },
                 {
-                    title: "Water Supply Infrastructure Analysis",
+                    title: "Water Supply Infrastructure Analysis in Brazil (2023)",
                     text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
                     image: "agua cobertura.jpeg",
                     link: ""
