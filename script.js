@@ -23,7 +23,29 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
 
             projectsTitle: "Projects",
-
+projects: [
+    {
+        title: "Land Cover Classification – Wyoming",
+        text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
+        image: "wyoming-cover.jpeg"
+    },
+    {
+        title: "Urban Expansion – Las Vegas Valley",
+        text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
+        image: "las vegas valley.jpeg"
+    },
+    {
+        title: "Water Supply Infrastructure Analysis",
+        text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
+        image: "agua cobertura.jpeg"
+    },
+    {
+        title: "Banana Production in Pernambuco (2023)",
+        text: "Analysis of banana production by municipality in Agreste and Zona da Mata. Includes charts, ranking and interactive map.",
+        image: "banana_hectares.png",
+        link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
+    }
+],
             experienceTitle: "Experience",
             experiences: [
                 {
@@ -82,7 +104,29 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
 
             projectsTitle: "Projetos",
-
+projects: [
+    {
+        title: "Classificação de Uso e Cobertura da Terra – Wyoming",
+        text: "Mapeamento de uso e cobertura da terra utilizando imagens de satélite e técnicas de SIG para análise ambiental.",
+        image: "wyoming-cover.jpeg"
+    },
+    {
+        title: "Expansão Urbana – Vale de Las Vegas",
+        text: "Análise espacial dos padrões de crescimento urbano com sensoriamento remoto e processamento geoespacial.",
+        image: "las vegas valley.jpeg"
+    },
+    {
+        title: "Análise da Infraestrutura de Abastecimento de Água",
+        text: "Avaliação espacial da infraestrutura de abastecimento e cobertura de serviço utilizando ferramentas SIG.",
+        image: "agua cobertura.jpeg"
+    },
+    {
+        title: "Produção de Banana em Pernambuco (2023)",
+        text: "Análise da produção de banana por município no Agreste e Zona da Mata. Inclui gráficos, ranking e mapa interativo.",
+        image: "banana_hectares.png",
+        link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
+    }
+],
             experienceTitle: "Experiência",
             experiences: [
                 {
