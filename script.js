@@ -51,18 +51,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             ],
             experienceTitle: "Experience",
-            experiences: [
-                {
-                    title: "Geospatial Analyst (Contract – PJ)",
-                    company: "Electrical Utility Company – Brazil",
-                    period: "Aug 2025 – Present",
-                    bullets: [
-                        "Spatial validation using QGIS",
-                        "Infrastructure dataset verification",
-                        "Python geoprocessing automation"
-                    ]
-                }
-            ],
+experiences: [
+    {
+        title: "Geospatial Analyst (Contract – PJ)",
+        company: "Electrical Utility Company – Brazil",
+        period: "Aug 2025 – Present",
+        bullets: [
+            "Spatial validation of electrical distribution networks using QGIS",
+            "Verification of poles and infrastructure datasets",
+            "Classification of existing and missing assets",
+            "Spatial quality control and consistency analysis",
+            "Execution of automated geoprocessing tools with Python scripts"
+        ]
+    },
+    {
+        title: "Administrative Director",
+        company: "MapGeo Jr.",
+        period: "2023 – 2024",
+        bullets: [
+            "Coordination of projects and internal management",
+            "Support in GIS projects and spatial analysis",
+            "Team organization and workflow supervision"
+        ]
+    },
+    {
+        title: "Undergraduate Research Fellow (FACEPE)",
+        company: "Environmental Diagnosis – Botafogo River Basin (PE)",
+        period: "",
+        bullets: [
+            "Environmental data collection and spatial analysis",
+            "Remote sensing and land use mapping",
+            "Support in technical reports and scientific research"
+        ]
+    }
+],
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
         },
@@ -111,18 +133,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             ],
             experienceTitle: "Experiência",
-            experiences: [
-                {
-                    title: "Analista de Geoprocessamento (Contrato – PJ)",
-                    company: "Companhia de Energia Elétrica – Brasil",
-                    period: "Ago 2025 – Atual",
-                    bullets: [
-                        "Validação espacial com QGIS",
-                        "Verificação de infraestrutura",
-                        "Automação com Python"
-                    ]
-                }
-            ],
+experiences: [
+    {
+        title: "Analista de Geoprocessamento (Contrato – PJ)",
+        company: "Companhia de Energia Elétrica – Brasil",
+        period: "Ago 2025 – Atual",
+        bullets: [
+            "Validação espacial de redes de distribuição elétrica utilizando QGIS",
+            "Verificação de bases de postes e malhas de infraestrutura",
+            "Classificação de ativos existentes e inexistentes",
+            "Controle de qualidade espacial e análise de consistência",
+            "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
+        ]
+    },
+    {
+        title: "Diretor Administrativo",
+        company: "MapGeo Jr.",
+        period: "2023 – 2024",
+        bullets: [
+            "Coordenação de projetos e gestão interna",
+            "Apoio em projetos de SIG e análise espacial",
+            "Organização da equipe e supervisão de fluxos de trabalho"
+        ]
+    },
+    {
+        title: "Bolsista de Iniciação Científica (FACEPE)",
+        company: "Diagnóstico Ambiental – Bacia do Rio Botafogo (PE)",
+        period: "",
+        bullets: [
+            "Coleta de dados ambientais e análise espacial",
+            "Sensoriamento remoto e mapeamento de uso do solo",
+            "Apoio na elaboração de relatórios técnicos e pesquisa científica"
+        ]
+    }
+],
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
         }
