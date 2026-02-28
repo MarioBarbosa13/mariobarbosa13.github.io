@@ -214,7 +214,31 @@ projects: [
             container.appendChild(div);
         });
     }
+// ===== RENDER PROJECTS =====
+function renderProjects(lang) {
+    const container = document.querySelector(".projects-grid");
+    container.innerHTML = "";
 
+    translations[lang].projects.forEach(project => {
+        const div = document.createElement("div");
+        div.className = "project-card";
+
+        div.innerHTML = `
+            <img src="${project.image}" alt="${project.title}">
+            <h3>${project.title}</h3>
+            <p>${project.text}</p>
+            ${project.link ? `
+                <a href="${project.link}" target="_blank">
+                    <button>
+                        📊 ${lang === "pt" ? "Abrir notebook interativo" : "Open Interactive Notebook"}
+                    </button>
+                </a>
+            ` : ""}
+        `;
+
+        container.appendChild(div);
+    });
+}
     // ===== SET LANGUAGE =====
     function setLanguage(lang) {
         const t = translations[lang];
@@ -239,6 +263,7 @@ projects: [
 
         renderArticles(lang);
         renderExperience(lang);
+        renderProjects(lang);
 
         if (lang === "pt") {
             cvEn.style.display = "none";
