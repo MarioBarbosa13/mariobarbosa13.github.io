@@ -4,41 +4,97 @@ document.addEventListener("DOMContentLoaded", function () {
     const cvPt = document.getElementById("cv-pt");
     const toggle = document.getElementById("languageToggle");
 
+    // ===== TEXTOS FIXOS =====
     const translations = {
         en: {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
             aboutTitle: "About Me",
-            aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
+            aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis...",
             educationTitle: "Education",
             educationText: "Bachelor in Geography – Federal University of Pernambuco (UFPE)<br>Master's Student in Geography – UFPE (2026)",
-
             articlesTitle: "Articles",
             readArticle: "Read Full Article",
-
             projectsTitle: "Projects",
             openNotebook: "Open Interactive Notebook",
-
             experienceTitle: "Experience",
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
         },
-
         pt: {
             subtitle: "Analista de Geoprocessamento especializado em Sensoriamento Remoto",
             aboutTitle: "Sobre Mim",
-            aboutText: "Analista de Geoprocessamento especializado em SIG, Sensoriamento Remoto e Análise de Dados Ambientais. Experiência em modelagem espacial, classificação de uso e cobertura do solo e interpretação de imagens de satélite. Atuação voltada à variabilidade climática, monitoramento ambiental e planejamento territorial.",
+            aboutText: "Analista de Geoprocessamento especializado em SIG...",
             educationTitle: "Formação",
             educationText: "Bacharel em Geografia – Universidade Federal de Pernambuco (UFPE)<br>Mestrando em Geografia – UFPE (2026)",
-
             articlesTitle: "Artigos",
             readArticle: "Ler Artigo Completo",
-
             projectsTitle: "Projetos",
             openNotebook: "Abrir Notebook Interativo",
-
             experienceTitle: "Experiência",
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
+        }
+    };
+
+    // ===== DADOS DINÂMICOS =====
+    const translationsData = {
+        en: {
+            articles: [
+                {
+                    title: "Analysis of Vegetation Dynamics...",
+                    summary: "Study on vegetation and urban expansion...",
+                    publication: "Cadernos de Geociências – UFBA, 2025",
+                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
+                }
+            ],
+            projects: [
+                {
+                    title: "Banana Production in Pernambuco (2023)",
+                    text: "Analysis of banana production...",
+                    image: "banana_hectares.png",
+                    link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
+                }
+            ],
+            experiences: [
+                {
+                    title: "Geospatial Analyst (Contract – PJ)",
+                    company: "Electrical Utility Company – Brazil",
+                    period: "Aug 2025 – Present",
+                    bullets: [
+                        "Spatial validation of networks",
+                        "GIS-based quality control"
+                    ]
+                }
+            ]
+        },
+        pt: {
+            articles: [
+                {
+                    title: "A Análise da Dinâmica da Vegetação...",
+                    summary: "Estudo sobre vegetação e expansão urbana...",
+                    publication: "Cadernos de Geociências – UFBA, 2025",
+                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
+                }
+            ],
+            projects: [
+                {
+                    title: "Produção de Banana em Pernambuco (2023)",
+                    text: "Análise da produção de banana...",
+                    image: "banana_hectares.png",
+                    link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
+                }
+            ],
+            experiences: [
+                {
+                    title: "Analista de Geoprocessamento (Contrato – PJ)",
+                    company: "Companhia de Energia – Brasil",
+                    period: "Ago 2024 – Atual",
+                    bullets: [
+                        "Validação espacial de redes",
+                        "Controle de qualidade SIG"
+                    ]
+                }
+            ]
         }
     };
 
@@ -46,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderArticles(lang) {
         const container = document.getElementById("articlesContainer");
         if (!container) return;
-
         container.innerHTML = "";
 
         translationsData[lang].articles.forEach(article => {
@@ -72,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderExperience(lang) {
         const container = document.getElementById("experience-container");
         if (!container) return;
-
         container.innerHTML = "";
 
         translationsData[lang].experiences.forEach(exp => {
@@ -80,9 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
             div.className = "experience-item";
 
             let bulletsHTML = "";
-            exp.bullets.forEach(b => {
-                bulletsHTML += `<li>${b}</li>`;
-            });
+            exp.bullets.forEach(b => bulletsHTML += `<li>${b}</li>`);
 
             div.innerHTML = `
                 <p>
@@ -103,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderProjects(lang) {
         const container = document.querySelector(".projects-grid");
         if (!container) return;
-
         container.innerHTML = "";
 
         translationsData[lang].projects.forEach(project => {
@@ -115,10 +166,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <h3>${project.title}</h3>
                 <p>${project.text}</p>
                 ${project.link ? `
-                    <a href="${project.link}" 
-                       target="_blank" 
-                       class="project-btn">
-                       📊 ${translations[lang].openNotebook}
+                    <a href="${project.link}" target="_blank" class="project-btn">
+                        📊 ${translations[lang].openNotebook}
                     </a>
                 ` : ""}
             `;
@@ -131,15 +180,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ===== SET LANGUAGE =====
     function setLanguage(lang) {
-
         const t = translations[lang];
 
         function safeSetText(id, value, isHTML = false) {
             const el = document.getElementById(id);
-            if (el) {
-                if (isHTML) el.innerHTML = value;
-                else el.innerText = value;
-            }
+            if (!el) return;
+            isHTML ? el.innerHTML = value : el.innerText = value;
         }
 
         safeSetText("subtitle", t.subtitle);
@@ -167,11 +213,9 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("siteLanguage", lang);
     }
 
-    window.setLanguage = setLanguage;
-
     const savedLanguage = localStorage.getItem("siteLanguage");
     if (savedLanguage) setLanguage(savedLanguage);
-    else setLanguage((navigator.language || navigator.userLanguage).startsWith("pt") ? "pt" : "en");
+    else setLanguage(navigator.language.startsWith("pt") ? "pt" : "en");
 
     if (toggle) {
         toggle.addEventListener("change", function () {
