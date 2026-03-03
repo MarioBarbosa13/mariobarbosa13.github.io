@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         title: "Banana Production in Pernambuco (2023)",
         text: "Analysis of banana production by municipality in Agreste and Zona da Mata regions. Includes charts, ranking and interactive map."
     }
-]
+],
             experienceTitle: "Experience",
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         title: "Produção de Banana em Pernambuco (2023)",
         text: "Análise da produção de banana por município no Agreste e Zona da Mata. Inclui gráficos, ranking e mapa interativo."
     }
-]
+],
             experienceTitle: "Experiência",
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
