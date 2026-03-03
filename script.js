@@ -10,18 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: "Geospatial Analyst specialized in Remote Sensing and Environmental Monitoring",
             aboutTitle: "About Me",
             aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
+            educationTitle: "Education",
             education: [
-  {
-    title: "Bachelor in Geography",
-    institution: "Federal University of Pernambuco",
-    period: "2021 – 2025"
-  },
-  {
-    title: "Master's Student in Geography",
-    institution: "Federal University of Pernambuco",
-    period: "2026 – Present"
-  }
-],
+                {
+                    title: "Bachelor in Geography",
+                    institution: "Federal University of Pernambuco",
+                    period: "2021 – 2025"
+                },
+                {
+                    title: "Master's Student in Geography",
+                    institution: "Federal University of Pernambuco",
+                    period: "2026 – Present"
+                }
+            ],
             readArticle: "Read Full Article",
             openNotebook: "Open Interactive Notebook",
             articlesTitle: "Articles",
@@ -102,18 +103,19 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: "Analista de Geoprocessamento especializado em Sensoriamento Remoto",
             aboutTitle: "Sobre Mim",
             aboutText: "Analista de Geoprocessamento especializado em SIG, Sensoriamento Remoto e Análise Ambiental. Habilidades em modelagem espacial, classificação de uso e cobertura do solo e interpretação de imagens de satélite. Focado em variabilidade climática, monitoramento ambiental e planejamento territorial.",
+            educationTitle: "Formação",
             education: [
-  {
-    title: "Bacharel em Geografia",
-    institution: "Universidade Federal de Pernambuco",
-    period: "2021 – 2025"
-  },
-  {
-    title: "Mestrando em Geografia",
-    institution: "Universidade Federal de Pernambuco",
-    period: "2026 – Atual"
-  }
-],
+                {
+                    title: "Bacharel em Geografia",
+                    institution: "Universidade Federal de Pernambuco",
+                    period: "2021 – 2025"
+                },
+                {
+                    title: "Mestrando em Geografia",
+                    institution: "Universidade Federal de Pernambuco",
+                    period: "2026 – Atual"
+                }
+            ],
             readArticle: "Ler Artigo Completo",
             openNotebook: "Abrir Notebook Interativo",
             articlesTitle: "Artigos",
@@ -192,168 +194,51 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // ===============================
-    // Funções de renderização
-    // ===============================
-    function renderArticles(lang) {
-        const container = document.getElementById("articlesContainer");
+    function renderEducation(lang) {
+        const container = document.querySelector(".education-timeline");
         if (!container) return;
-        container.innerHTML = "";
-        translations[lang].articles.forEach(article => {
-            const card = document.createElement("div");
-            card.className = "article-card";
-            card.innerHTML = `
-                <h3>${article.title}</h3>
-                <p>${article.summary}</p>
-                <p>${article.publication}</p>
-                <a href="${article.link}" target="_blank">${translations[lang].readArticle}</a>
-            `;
-            container.appendChild(card);
-        });
-        const articlesTitleEl = document.getElementById("articles-title");
-        if (articlesTitleEl) articlesTitleEl.innerText = translations[lang].articlesTitle;
-    }
 
-    function renderProjects(lang) {
-        const container = document.querySelector(".projects-grid");
-        if (!container) return;
         container.innerHTML = "";
-        translations[lang].projects.forEach(project => {
+
+        translations[lang].education.forEach(edu => {
             const div = document.createElement("div");
-            div.className = "project-card";
+            div.className = "timeline-item";
             div.innerHTML = `
-                <img src="${project.image}" alt="${project.title}" style="cursor:pointer;">
-                <h3>${project.title}</h3>
-                <p>${project.text}</p>
-                ${project.link ? `<a href="${project.link}" target="_blank" class="project-btn">📊 ${translations[lang].openNotebook}</a>` : ""}
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>${edu.title}</h3>
+                    <p>${edu.institution} (${edu.period})</p>
+                </div>
             `;
             container.appendChild(div);
         });
-        const projectsTitleEl = document.getElementById("projects-title");
-        if (projectsTitleEl) projectsTitleEl.innerText = translations[lang].projectsTitle;
+
+        const titleEl = document.getElementById("education-title");
+        if (titleEl) titleEl.innerText = translations[lang].educationTitle;
     }
 
-    function renderExperience(lang) {
-        const container = document.getElementById("experience-container");
-        if (!container) return;
-        container.innerHTML = "";
-        translations[lang].experiences.forEach(exp => {
-            const div = document.createElement("div");
-            div.className = "experience-item";
-            let bullets = "";
-            if(exp.bullets && exp.bullets.length) {
-                exp.bullets.forEach(b => bullets += `<li>${b}</li>`);
-            }
-            div.innerHTML = `
-                <p><strong>${exp.title}</strong><br>${exp.company}<br>${exp.period}</p>
-                <ul>${bullets}</ul>
-            `;
-            container.appendChild(div);
-        });
-        const expTitleEl = document.getElementById("experience-title");
-        if (expTitleEl) expTitleEl.innerText = translations[lang].experienceTitle;
-    }
-function renderEducation(lang) {
-    const container = document.querySelector(".education-timeline");
-    if(!container) return;
-
-    container.innerHTML = "";
-
-    translations[lang].education.forEach(edu => {
-        const div = document.createElement("div");
-        div.className = "timeline-item";
-        div.innerHTML = `
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>${edu.title}</h3>
-                <p>${edu.institution} (${edu.period})</p>
-            </div>
-        `;
-        container.appendChild(div);
-    });
-
-    const titleEl = document.getElementById("education-title");
-    if(titleEl) titleEl.innerText = translations[lang].educationTitle;
-}
-    // ===============================
-    // Função para definir idioma
-    // ===============================
     function setLanguage(lang) {
-        const t = translations[lang];
 
         const subtitleEl = document.getElementById("subtitle");
-        if(subtitleEl) subtitleEl.innerText = t.subtitle;
+        if (subtitleEl) subtitleEl.innerText = translations[lang].subtitle;
 
         const aboutTitleEl = document.getElementById("about-title");
-        if(aboutTitleEl) aboutTitleEl.innerText = t.aboutTitle;
+        if (aboutTitleEl) aboutTitleEl.innerText = translations[lang].aboutTitle;
 
         const aboutTextEl = document.getElementById("about-text");
-        if(aboutTextEl) aboutTextEl.innerHTML = t.aboutText;
+        if (aboutTextEl) aboutTextEl.innerHTML = translations[lang].aboutText;
 
-        const educationTitleEl = document.getElementById("education-title");
-        if(educationTitleEl) educationTitleEl.innerText = t.educationTitle;
-
-        const educationTextEl = document.getElementById("education-text");
-        if(educationTextEl) educationTextEl.innerHTML = t.educationText;
-
-        const skillsTitleEl = document.getElementById("skills-title");
-        if(skillsTitleEl) skillsTitleEl.innerText = t.skillsTitle;
-
-        const contactTitleEl = document.getElementById("contact-title");
-        if(contactTitleEl) contactTitleEl.innerText = t.contactTitle;
-
-        renderArticles(lang);
-        renderProjects(lang);
-        renderExperience(lang);
-
-        // CV toggle
-        if(lang === "pt") {
-            if(cvEn) cvEn.style.display = "none";
-            if(cvPt) cvPt.style.display = "inline-block";
-            if(toggle) toggle.checked = true;
-        } else {
-            if(cvEn) cvEn.style.display = "inline-block";
-            if(cvPt) cvPt.style.display = "none";
-            if(toggle) toggle.checked = false;
-        }
+        renderEducation(lang);
 
         localStorage.setItem("siteLanguage", lang);
     }
 
-    // Inicializa idioma
     const savedLanguage = localStorage.getItem("siteLanguage");
     setLanguage(savedLanguage || (navigator.language.startsWith("pt") ? "pt" : "en"));
 
-    // Toggle de idioma
-    if(toggle) {
+    if (toggle) {
         toggle.addEventListener("change", function () {
             setLanguage(this.checked ? "pt" : "en");
-        });
-    }
-
-    // ===============================
-    // Modal para zoom das imagens dos projetos
-    // ===============================
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    const closeModal = modal ? modal.querySelector(".close") : null;
-
-    const projectsGrid = document.querySelector(".projects-grid");
-    if(projectsGrid && modal && modalImg && closeModal) {
-        projectsGrid.addEventListener("click", function(e){
-            if(e.target.tagName === "IMG") {
-                modal.style.display = "block";
-                modalImg.src = e.target.src;
-                modalImg.alt = e.target.alt;
-            }
-        });
-
-        closeModal.addEventListener("click", function(){
-            modal.style.display = "none";
-        });
-
-        modal.addEventListener("click", function(e){
-            if(e.target === modal) modal.style.display = "none";
         });
     }
 
