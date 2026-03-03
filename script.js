@@ -11,9 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutTitle: "About Me",
             aboutText: "Geospatial Analyst specialized in GIS, Remote Sensing and Environmental Data Analysis. Skilled in spatial modeling, land use classification and satellite imagery interpretation. Focused on climate variability, environmental monitoring and territorial planning.",
             education: [
-    { title: "Bachelor in Geography", period: "UFPE – 2018–2022" },
-    { title: "Master's Student in Geography", period: "UFPE – 2026" }
-  ],
+  {
+    title: "Bachelor in Geography",
+    institution: "Federal University of Pernambuco",
+    period: "2021 – 2025"
+  },
+  {
+    title: "Master's Student in Geography",
+    institution: "Federal University of Pernambuco",
+    period: "2026 – Present"
+  }
+],
             readArticle: "Read Full Article",
             openNotebook: "Open Interactive Notebook",
             articlesTitle: "Articles",
@@ -94,8 +102,18 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: "Analista de Geoprocessamento especializado em Sensoriamento Remoto",
             aboutTitle: "Sobre Mim",
             aboutText: "Analista de Geoprocessamento especializado em SIG, Sensoriamento Remoto e Análise Ambiental. Habilidades em modelagem espacial, classificação de uso e cobertura do solo e interpretação de imagens de satélite. Focado em variabilidade climática, monitoramento ambiental e planejamento territorial.",
-            educationTitle: "Formação",
-            educationText: "Bacharel em Geografia – UFPE<br>Mestrando em Geografia – UFPE (2026)",
+            education: [
+  {
+    title: "Bacharel em Geografia",
+    institution: "Universidade Federal de Pernambuco",
+    period: "2021 – 2025"
+  },
+  {
+    title: "Mestrando em Geografia",
+    institution: "Universidade Federal de Pernambuco",
+    period: "2026 – Atual"
+  }
+],
             readArticle: "Ler Artigo Completo",
             openNotebook: "Abrir Notebook Interativo",
             articlesTitle: "Artigos",
