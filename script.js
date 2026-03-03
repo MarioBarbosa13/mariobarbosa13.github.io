@@ -27,6 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
             openNotebook: "Open Interactive Notebook",
             articlesTitle: "Articles",
             projectsTitle: "Projects",
+            projects: [
+    {
+        title: "Land Cover Classification – Wyoming (2024)",
+        text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis."
+    },
+    {
+        title: "Urban Expansion – Las Vegas Valley (2024)",
+        text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing."
+    },
+    {
+        title: "Water Supply Infrastructure Analysis in Brazil (2023)",
+        text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning."
+    },
+    {
+        title: "Banana Production in Pernambuco (2023)",
+        text: "Analysis of banana production by municipality in Agreste and Zona da Mata regions. Includes charts, ranking and interactive map."
+    }
+]
             experienceTitle: "Experience",
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
@@ -52,6 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
             openNotebook: "Abrir Notebook Interativo",
             articlesTitle: "Artigos",
             projectsTitle: "Projetos",
+    projects: [
+    {
+        title: "Classificação de Uso e Cobertura do Solo – Wyoming (2024)",
+        text: "Mapeamento de uso e cobertura do solo utilizando imagens de satélite e técnicas de SIG para análise ambiental."
+    },
+    {
+        title: "Expansão Urbana – Las Vegas Valley (2024)",
+        text: "Análise espacial do crescimento urbano utilizando sensoriamento remoto e processamento de dados geoespaciais."
+    },
+    {
+        title: "Análise da Infraestrutura de Abastecimento de Água no Brasil (2023)",
+        text: "Avaliação espacial da infraestrutura de abastecimento e cobertura dos serviços utilizando ferramentas de SIG."
+    },
+    {
+        title: "Produção de Banana em Pernambuco (2023)",
+        text: "Análise da produção de banana por município no Agreste e Zona da Mata. Inclui gráficos, ranking e mapa interativo."
+    }
+]
             experienceTitle: "Experiência",
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
@@ -115,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (experienceTitleEl) experienceTitleEl.innerText = t.experienceTitle;
 
         renderEducation(lang);
-
+        renderProjects(lang);
         // CV toggle
         if (lang === "pt") {
             if (cvEn) cvEn.style.display = "none";
@@ -130,6 +166,19 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("siteLanguage", lang);
     }
 
+function renderProjects(lang) {
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach((card, index) => {
+        const title = card.querySelector("h3");
+        const text = card.querySelector("p");
+
+        if (translations[lang].projects[index]) {
+            title.textContent = translations[lang].projects[index].title;
+            text.textContent = translations[lang].projects[index].text;
+        }
+    });
+}
     // ===============================
     // INIT LANGUAGE
     // ===============================
