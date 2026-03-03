@@ -256,6 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderEducation(lang) {
     const container = document.querySelector(".education-timeline");
     if(!container) return;
+
     container.innerHTML = "";
 
     translations[lang].education.forEach(edu => {
@@ -265,7 +266,7 @@ function renderEducation(lang) {
             <div class="timeline-dot"></div>
             <div class="timeline-content">
                 <h3>${edu.title}</h3>
-                <p>${edu.period}</p>
+                <p>${edu.institution} (${edu.period})</p>
             </div>
         `;
         container.appendChild(div);
