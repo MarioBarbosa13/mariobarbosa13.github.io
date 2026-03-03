@@ -26,76 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
             readArticle: "Read Full Article",
             openNotebook: "Open Interactive Notebook",
             articlesTitle: "Articles",
-            articles: [
-                {
-                    title: "Analysis of Vegetation Dynamics and Urban Expansion in Tamandaré–PE",
-                    summary: "Remote sensing analysis of land cover and urban growth.",
-                    publication: "Cadernos de Geociências – UFBA, 2025",
-                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
-                }
-            ],
             projectsTitle: "Projects",
-            projects: [
-                {
-                    title: "Land Cover Classification – Wyoming (2024)",
-                    text: "Land cover mapping and spatial classification using satellite imagery and GIS techniques for environmental analysis.",
-                    image: "wyoming-cover.jpeg",
-                    link: ""
-                },
-                {
-                    title: "Urban Expansion – Las Vegas Valley (2024)",
-                    text: "Spatial analysis of urban growth patterns using remote sensing and geospatial data processing.",
-                    image: "las vegas valley.jpeg",
-                    link: ""
-                },
-                {
-                    title: "Water Supply Infrastructure Analysis in Brazil (2023)",
-                    text: "Spatial assessment of water supply infrastructure and service coverage using GIS tools for territorial planning.",
-                    image: "agua cobertura.jpeg",
-                    link: ""
-                },
-                {
-                    title: "Banana Production in Pernambuco (2023)",
-                    text: "Municipal production analysis with interactive map.",
-                    image: "banana_hectares.png",
-                    link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
-                }
-            ],
             experienceTitle: "Experience",
-            experiences: [
-                {
-                    title: "Geospatial Analyst (Contract – PJ)",
-                    company: "Electrical Utility Company – Brazil",
-                    period: "Aug 2025 – Present",
-                    bullets: [
-                        "Spatial validation of electrical distribution networks using QGIS",
-                        "Verification of poles and infrastructure datasets",
-                        "Classification of existing and missing assets",
-                        "Spatial quality control and consistency analysis",
-                        "Execution of automated geoprocessing tools with Python scripts"
-                    ]
-                },
-                {
-                    title: "Administrative Director",
-                    company: "MapGeo Jr.",
-                    period: "2023 – 2024",
-                    bullets: [
-                        "Coordination of projects and internal management",
-                        "Support in GIS projects and spatial analysis",
-                        "Team organization and workflow supervision"
-                    ]
-                },
-                {
-                    title: "Undergraduate Research Fellow (FACEPE)",
-                    company: "Environmental Diagnosis – Botafogo River Basin (PE)",
-                    period: "",
-                    bullets: [
-                        "Environmental data collection and spatial analysis",
-                        "Remote sensing and land use mapping",
-                        "Support in technical reports and scientific research"
-                    ]
-                }
-            ],
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
         },
@@ -119,81 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
             readArticle: "Ler Artigo Completo",
             openNotebook: "Abrir Notebook Interativo",
             articlesTitle: "Artigos",
-            articles: [
-                {
-                    title: "Análise da Dinâmica da Vegetação e Expansão Urbana em Tamandaré–PE",
-                    summary: "Análise com sensoriamento remoto.",
-                    publication: "Cadernos de Geociências – UFBA, 2025",
-                    link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
-                }
-            ],
             projectsTitle: "Projetos",
-            projects: [
-                {
-                    title: "Classificação de Cobertura do Solo – Wyoming",
-                    text: "Mapeamento e classificação de cobertura do solo usando imagens de satélite e GIS para análise ambiental.",
-                    image: "wyoming-cover.jpeg",
-                    link: ""
-                },
-                {
-                    title: "Expansão Urbana – Vale de Las Vegas",
-                    text: "Análise espacial do crescimento urbano usando sensoriamento remoto e dados geoespaciais.",
-                    image: "las vegas valley.jpeg",
-                    link: ""
-                },
-                {
-                    title: "Análise de Infraestrutura de Abastecimento de Água",
-                    text: "Avaliação espacial da infraestrutura e cobertura de serviços utilizando ferramentas GIS para planejamento territorial.",
-                    image: "agua cobertura.jpeg",
-                    link: ""
-                },
-                {
-                    title: "Produção de Banana em Pernambuco (2023)",
-                    text: "Análise municipal com mapa interativo.",
-                    image: "banana_hectares.png",
-                    link: "https://colab.research.google.com/drive/1zcZ5I6uQ3Bq31ussrv-QgrkRmELb9UYD?usp=sharing"
-                }
-            ],
             experienceTitle: "Experiência",
-            experiences: [
-                {
-                    title: "Analista de Geoprocessamento (Contrato – PJ)",
-                    company: "Companhia de Energia Elétrica – Brasil",
-                    period: "Ago 2025 – Atual",
-                    bullets: [
-                        "Validação espacial de redes de distribuição elétrica utilizando QGIS",
-                        "Verificação de bases de postes e malhas de infraestrutura",
-                        "Classificação de ativos existentes e inexistentes",
-                        "Controle de qualidade espacial e análise de consistência",
-                        "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
-                    ]
-                },
-                {
-                    title: "Diretor Administrativo",
-                    company: "MapGeo Jr.",
-                    period: "2023 – 2024",
-                    bullets: [
-                        "Coordenação de projetos e gestão interna",
-                        "Apoio em projetos de SIG e análise espacial",
-                        "Organização da equipe e supervisão de fluxos de trabalho"
-                    ]
-                },
-                {
-                    title: "Bolsista de Iniciação Científica (FACEPE)",
-                    company: "Diagnóstico Ambiental – Bacia do Rio Botafogo (PE)",
-                    period: "",
-                    bullets: [
-                        "Coleta de dados ambientais e análise espacial",
-                        "Sensoriamento remoto e mapeamento de uso do solo",
-                        "Apoio na elaboração de relatórios técnicos e pesquisa científica"
-                    ]
-                }
-            ],
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
         }
     };
 
+    // ===============================
+    // RENDER EDUCATION
+    // ===============================
     function renderEducation(lang) {
         const container = document.querySelector(".education-timeline");
         if (!container) return;
@@ -217,28 +84,88 @@ document.addEventListener("DOMContentLoaded", function () {
         if (titleEl) titleEl.innerText = translations[lang].educationTitle;
     }
 
+    // ===============================
+    // SET LANGUAGE
+    // ===============================
     function setLanguage(lang) {
+        const t = translations[lang];
 
         const subtitleEl = document.getElementById("subtitle");
-        if (subtitleEl) subtitleEl.innerText = translations[lang].subtitle;
+        if (subtitleEl) subtitleEl.innerText = t.subtitle;
 
         const aboutTitleEl = document.getElementById("about-title");
-        if (aboutTitleEl) aboutTitleEl.innerText = translations[lang].aboutTitle;
+        if (aboutTitleEl) aboutTitleEl.innerText = t.aboutTitle;
 
         const aboutTextEl = document.getElementById("about-text");
-        if (aboutTextEl) aboutTextEl.innerHTML = translations[lang].aboutText;
+        if (aboutTextEl) aboutTextEl.innerHTML = t.aboutText;
+
+        const skillsTitleEl = document.getElementById("skills-title");
+        if (skillsTitleEl) skillsTitleEl.innerText = t.skillsTitle;
+
+        const contactTitleEl = document.getElementById("contact-title");
+        if (contactTitleEl) contactTitleEl.innerText = t.contactTitle;
+
+        const articlesTitleEl = document.getElementById("articles-title");
+        if (articlesTitleEl) articlesTitleEl.innerText = t.articlesTitle;
+
+        const projectsTitleEl = document.getElementById("projects-title");
+        if (projectsTitleEl) projectsTitleEl.innerText = t.projectsTitle;
+
+        const experienceTitleEl = document.getElementById("experience-title");
+        if (experienceTitleEl) experienceTitleEl.innerText = t.experienceTitle;
 
         renderEducation(lang);
+
+        // CV toggle
+        if (lang === "pt") {
+            if (cvEn) cvEn.style.display = "none";
+            if (cvPt) cvPt.style.display = "inline-block";
+            if (toggle) toggle.checked = true;
+        } else {
+            if (cvEn) cvEn.style.display = "inline-block";
+            if (cvPt) cvPt.style.display = "none";
+            if (toggle) toggle.checked = false;
+        }
 
         localStorage.setItem("siteLanguage", lang);
     }
 
+    // ===============================
+    // INIT LANGUAGE
+    // ===============================
     const savedLanguage = localStorage.getItem("siteLanguage");
-    setLanguage(savedLanguage || (navigator.language.startsWith("pt") ? "pt" : "en"));
+    const defaultLang = savedLanguage || (navigator.language.startsWith("pt") ? "pt" : "en");
+    setLanguage(defaultLang);
 
     if (toggle) {
         toggle.addEventListener("change", function () {
             setLanguage(this.checked ? "pt" : "en");
+        });
+    }
+
+    // ===============================
+    // MODAL ZOOM
+    // ===============================
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeModal = modal ? modal.querySelector(".close") : null;
+
+    const projectsGrid = document.querySelector(".projects-grid");
+    if (projectsGrid && modal && modalImg && closeModal) {
+        projectsGrid.addEventListener("click", function (e) {
+            if (e.target.tagName === "IMG") {
+                modal.style.display = "block";
+                modalImg.src = e.target.src;
+                modalImg.alt = e.target.alt;
+            }
+        });
+
+        closeModal.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) modal.style.display = "none";
         });
     }
 
