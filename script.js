@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
             readArticle: "Read Full Article",
             openNotebook: "Open Interactive Notebook",
             articlesTitle: "Articles",
+            articles: [
+    {
+        title: "Vegetation Dynamics and Urban Expansion in Tamandaré–PE",
+        summary: "Remote sensing based analysis.",
+        publication: "Cadernos de Geociências – UFBA, 2025",
+        link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
+    }
+],
             projectsTitle: "Projects",
             projects: [
     {
@@ -46,6 +54,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 ],
             experienceTitle: "Experience",
+            experiences: [
+    {
+        title: "Geoprocessing Analyst (Contract – PJ)",
+        company: "Electric Energy Company – Brazil",
+        period: "Aug 2025 – Present",
+        bullets: [
+            "Spatial validation of electrical distribution networks using QGIS",
+            "Verification of pole databases and infrastructure grids",
+            "Classification of existing and non-existing assets",
+            "Spatial quality control and consistency analysis",
+            "Execution of automated geoprocessing tools with Python scripts"
+        ]
+    },
+    {
+        title: "Administrative Director",
+        company: "MapGeo Jr.",
+        period: "2023 – 2024",
+        bullets: [
+            "Project coordination and internal management",
+            "Support in GIS and spatial analysis projects",
+            "Team organization and workflow supervision"
+        ]
+    },
+    {
+        title: "Scientific Research Fellow (FACEPE)",
+        company: "Environmental Diagnosis – Botafogo River Basin (PE)",
+        period: "",
+        bullets: [
+            "Environmental data collection and spatial analysis",
+            "Remote sensing and land use mapping",
+            "Technical report preparation and scientific research support"
+        ]
+    }
+],
             skillsTitle: "Technical Skills",
             contactTitle: "Contact"
         },
@@ -69,6 +111,14 @@ document.addEventListener("DOMContentLoaded", function () {
             readArticle: "Ler Artigo Completo",
             openNotebook: "Abrir Notebook Interativo",
             articlesTitle: "Artigos",
+            articles: [
+    {
+        title: "Análise da Dinâmica da Vegetação e Expansão Urbana em Tamandaré–PE",
+        summary: "Análise com sensoriamento remoto.",
+        publication: "Cadernos de Geociências – UFBA, 2025",
+        link: "https://periodicos.ufba.br/index.php/cadgeoc/article/view/68812"
+    }
+],
             projectsTitle: "Projetos",
     projects: [
     {
@@ -89,6 +139,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 ],
             experienceTitle: "Experiência",
+            experiences: [
+    {
+        title: "Analista de Geoprocessamento (Contrato – PJ)",
+        company: "Companhia de Energia Elétrica – Brasil",
+        period: "Ago 2025 – Atual",
+        bullets: [
+            "Validação espacial de redes de distribuição elétrica utilizando QGIS",
+            "Verificação de bases de postes e malhas de infraestrutura",
+            "Classificação de ativos existentes e inexistentes",
+            "Controle de qualidade espacial e análise de consistência",
+            "Execução de ferramentas automatizadas de geoprocessamento com scripts em Python"
+        ]
+    },
+    {
+        title: "Diretor Administrativo",
+        company: "MapGeo Jr.",
+        period: "2023 – 2024",
+        bullets: [
+            "Coordenação de projetos e gestão interna",
+            "Apoio em projetos de SIG e análise espacial",
+            "Organização da equipe e supervisão de fluxos de trabalho"
+        ]
+    },
+    {
+        title: "Bolsista de Iniciação Científica (FACEPE)",
+        company: "Diagnóstico Ambiental – Bacia do Rio Botafogo (PE)",
+        period: "",
+        bullets: [
+            "Coleta de dados ambientais e análise espacial",
+            "Sensoriamento remoto e mapeamento de uso do solo",
+            "Apoio na elaboração de relatórios técnicos e pesquisa científica"
+        ]
+    }
+],
             skillsTitle: "Habilidades Técnicas",
             contactTitle: "Contato"
         }
@@ -152,6 +236,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         renderEducation(lang);
         renderProjects(lang);
+        renderArticles(lang);
+        renderExperience(lang);
         // CV toggle
         if (lang === "pt") {
             if (cvEn) cvEn.style.display = "none";
@@ -177,6 +263,54 @@ function renderProjects(lang) {
             title.textContent = translations[lang].projects[index].title;
             text.textContent = translations[lang].projects[index].text;
         }
+    });
+}
+    function renderArticles(lang) {
+    const container = document.getElementById("articlesContainer");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    translations[lang].articles.forEach(article => {
+        const div = document.createElement("div");
+        div.className = "article-card";
+
+        div.innerHTML = `
+            <h3>${article.title}</h3>
+            <p>${article.summary}</p>
+            <p><em>${article.publication}</em></p>
+            <a href="${article.link}" target="_blank" class="project-btn">
+                ${translations[lang].readArticle}
+            </a>
+        `;
+
+        container.appendChild(div);
+    });
+}
+    function renderExperience(lang) {
+    const container = document.getElementById("experience-container");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    translations[lang].experiences.forEach(exp => {
+        const div = document.createElement("div");
+        div.className = "experience-item";
+
+        let bulletsHTML = "";
+        if (exp.bullets && exp.bullets.length > 0) {
+            bulletsHTML = "<ul>" + 
+                exp.bullets.map(b => `<li>${b}</li>`).join("") +
+                "</ul>";
+        }
+
+        div.innerHTML = `
+            <h3>${exp.title}</h3>
+            <p><strong>${exp.company}</strong> ${exp.period ? `| ${exp.period}` : ""}</p>
+            ${bulletsHTML}
+        `;
+
+        container.appendChild(div);
     });
 }
     // ===============================
