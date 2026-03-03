@@ -455,5 +455,5 @@ footer {
 
 .project-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(34,197,94,0.4);
+    box-shadow: 0 10px 25px rgba(34,197,94,0.25);
 }
